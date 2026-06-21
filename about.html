@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Alchemy Joon · ตลาดใบบัว วงศ์สว่าง</title>
+<link rel="icon" href="images/AlchemyJoon_SymbolLogo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Anuphan:wght@200;300;400&family=Noto+Serif+Thai:wght@200;300;400&family=Noto+Sans+Thai:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:      #141414;
+  --sg-deep:  #2A3D2E;
+  --sg:       #4A6741;
+  --sg-light: #6B8F62;
+  --gold:     #C8A04A;
+  --gold-lt:  #E8C878;
+  --linen:    #E8DFC8;
+  --cream:    #F6F2E8;
+  --muted:    #7A8A7A;
+  --sage-pale:#C8E8B8;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Avenir Next', 'Avenir', 'Century Gothic', 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+.th, p:lang(th), [lang="th"] {
+  font-family: 'Anuphan', 'Noto Sans Thai', sans-serif;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(20,20,20,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200,160,74,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  height: 64px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none; height: 64px;
+}
+.nav-logo-img {
+  height: 28px; width: auto;
+  object-fit: contain; display: block;
+}
+.nav-logo-fallback {
+  font-family: 'Marcellus', serif;
+  font-size: 18px; color: var(--cream);
+  letter-spacing: 0.15em;
+  display: flex; align-items: center; gap: 6px;
+}
+.nav-logo-fallback span { color: var(--gold); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  font-size: 12px; letter-spacing: 0.1em;
+  color: rgba(246,242,232,0.6);
+  text-decoration: none; transition: color 0.25s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta {
+  background: linear-gradient(135deg, var(--gold), var(--gold-lt), var(--gold));
+  color: var(--ink) !important; font-weight: 400 !important;
+  padding: 8px 20px !important; border-radius: 40px !important;
+  letter-spacing: 0.08em !important;
+}
+
+/* ── ABOUT HERO ── */
+.about-hero {
+  min-height: 52vh;
+  background: linear-gradient(160deg, var(--ink) 0%, #1C2820 50%, var(--sg-deep) 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 120px 5vw 80px;
+  position: relative; overflow: hidden;
+}
+.about-hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; opacity: 0.35;
+}
+.about-eyebrow {
+  font-size: 10px; letter-spacing: 0.3em; color: var(--gold);
+  margin-bottom: 20px; position: relative; z-index: 1;
+  opacity: 0; animation: fadeUp 0.9s 0.2s forwards;
+}
+.about-title {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(36px, 5vw, 64px);
+  color: var(--cream); line-height: 1.1;
+  letter-spacing: 0.06em; margin-bottom: 8px;
+  position: relative; z-index: 1;
+  opacity: 0; animation: fadeUp 0.9s 0.4s forwards;
+}
+.about-title em { font-style: normal; color: var(--gold); }
+.about-sub {
+  font-weight: 200; font-size: 11px; letter-spacing: 0.25em;
+  color: var(--muted); position: relative; z-index: 1;
+  opacity: 0; animation: fadeUp 0.9s 0.55s forwards;
+}
+.gold-line {
+  height: 1px; width: 60px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 28px auto 0;
+  position: relative; z-index: 1;
+  opacity: 0; animation: fadeUp 0.9s 0.65s forwards;
+}
+
+/* ── CONTENT AREA ── */
+.about-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 80px 5vw 100px;
+}
+
+/* Opening pull-quote */
+.about-opening {
+  margin-bottom: 64px;
+  padding: 48px 0 48px;
+  border-top: 1px solid rgba(200,160,74,0.2);
+  border-bottom: 1px solid rgba(200,160,74,0.2);
+}
+.about-opening-th {
+  font-family: 'Noto Serif Thai', serif;
+  font-weight: 200;
+  font-size: clamp(20px, 3vw, 28px);
+  color: var(--sg-deep);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+.about-founder-line {
+  font-family: 'Anuphan', sans-serif;
+  font-size: 14px; color: var(--muted);
+  font-style: italic; line-height: 1.8;
+}
+
+/* Section blocks */
+.about-section {
+  margin-bottom: 56px;
+}
+.about-section-label {
+  font-family: 'Marcellus', serif;
+  font-size: 22px; color: var(--ink);
+  margin-bottom: 16px;
+  display: flex; align-items: center; gap: 14px;
+}
+.about-section-label::after {
+  content: '';
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, rgba(200,160,74,0.3), transparent);
+}
+.about-section-label .label-th {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 13px; color: var(--sg);
+  font-weight: 300; letter-spacing: 0.05em;
+}
+.about-p {
+  font-family: 'Anuphan', 'Noto Sans Thai', sans-serif;
+  font-size: 15px; color: #5A5A5A;
+  line-height: 2; margin-bottom: 16px;
+  font-weight: 300;
+}
+.about-p:last-child { margin-bottom: 0; }
+
+/* Highlighted statement */
+.about-statement {
+  background: var(--sg-deep);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 28px 32px;
+  margin: 40px 0;
+}
+.about-statement-th {
+  font-family: 'Noto Serif Thai', serif;
+  font-weight: 200; font-size: clamp(16px, 2.5vw, 22px);
+  color: var(--cream); line-height: 1.7;
+}
+.about-statement-th em { font-style: normal; color: var(--gold); }
+
+/* Three pillars */
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px; margin: 40px 0;
+}
+.pillar {
+  background: var(--linen);
+  padding: 28px 24px;
+  text-align: center;
+  border: 1px solid rgba(74,103,65,0.1);
+}
+.pillar-name {
+  font-family: 'Marcellus', serif;
+  font-size: 18px; color: var(--ink);
+  margin-bottom: 8px;
+}
+.pillar-th {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 12px; color: var(--sg);
+  font-weight: 300;
+}
+
+/* Closing sign-off */
+.about-closing {
+  text-align: center;
+  padding-top: 48px;
+  border-top: 1px solid rgba(200,160,74,0.2);
+}
+.about-closing-th {
+  font-family: 'Noto Serif Thai', serif;
+  font-weight: 200; font-size: 18px;
+  color: var(--sg-deep); margin-bottom: 16px;
+  font-style: italic;
+}
+.about-closing-sign {
+  font-size: 12px; letter-spacing: 0.18em;
+  color: rgba(200,160,74,0.7);
+}
+
+/* CTA row */
+.about-cta-row {
+  display: flex; gap: 14px;
+  justify-content: center; flex-wrap: wrap;
+  margin-top: 48px;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-lt), var(--gold));
+  color: var(--ink); font-family: 'Anuphan', sans-serif;
+  font-size: 13px; font-weight: 400; letter-spacing: 0.1em;
+  padding: 14px 36px; border-radius: 40px; border: none;
+  cursor: pointer; text-decoration: none; display: inline-block;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
+.btn-secondary {
+  background: transparent; color: var(--ink);
+  font-family: 'Anuphan', sans-serif;
+  font-size: 13px; letter-spacing: 0.1em;
+  padding: 13px 36px; border-radius: 40px;
+  border: 1px solid rgba(42,61,46,0.3);
+  cursor: pointer; text-decoration: none; display: inline-block;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-secondary:hover { border-color: var(--sg); color: var(--sg); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  padding: 0;
+  border-top: 1px solid rgba(200,160,74,0.15);
+}
+.footer-top {
+  padding: 64px 5vw 48px;
+  display: flex; align-items: flex-start;
+  gap: 60px; flex-wrap: wrap;
+}
+.footer-brand { flex: 1; min-width: 200px; }
+.footer-logo-wrap { margin-bottom: 14px; }
+.footer-logo-img { height: 36px; width: auto; object-fit: contain; display: block; }
+.footer-logo-text {
+  font-family: 'Marcellus', serif;
+  font-size: 22px; color: var(--cream); display: none;
+}
+.footer-logo-text span { color: var(--gold); }
+.footer-emotion {
+  font-family: 'Noto Serif Thai', serif;
+  font-weight: 200; font-size: 13px;
+  color: var(--muted); line-height: 1.8;
+  font-style: italic; max-width: 220px;
+  margin-bottom: 20px;
+}
+.footer-sign {
+  font-size: 11px; letter-spacing: 0.15em;
+  color: rgba(200,160,74,0.5);
+}
+.footer-col { min-width: 140px; }
+.footer-col-title {
+  font-size: 9px; letter-spacing: 0.2em;
+  color: var(--gold); margin-bottom: 16px;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a {
+  font-size: 12px; color: var(--muted);
+  text-decoration: none; transition: color 0.2s;
+  letter-spacing: 0.04em;
+}
+.footer-links a:hover { color: var(--cream); }
+.footer-bottom {
+  border-top: 1px solid rgba(200,160,74,0.08);
+  padding: 20px 5vw;
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 12px;
+}
+.footer-copy { font-size: 10px; color: rgba(122,138,122,0.4); letter-spacing: 0.08em; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .about-pillars { grid-template-columns: 1fr; }
+  .footer-top { flex-direction: column; gap: 32px; }
+}
+@media (max-width: 600px) {
+  .about-statement { padding: 20px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="index.html" class="nav-logo" aria-label="Alchemy Joon — กลับหน้าหลัก">
+    <img src="images/ALCHEMY_JOON_Logo2white.png" alt="Alchemy Joon" class="nav-logo-img" height="32"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <span class="nav-logo-fallback" style="display:none">ALCHEMY <span>JOON</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#gallery">GALLERY</a></li>
+    <li><a href="index.html#services">SERVICES</a></li>
+    <li><a href="index.html#pricing">PRICING</a></li>
+    <li><a href="index.html#stylists">STYLISTS</a></li>
+    <li><a href="about.html" class="active">ABOUT</a></li>
+    <li><a href="index.html#booking" class="nav-cta">จองเลย →</a></li>
+  </ul>
+</nav>
+
+<!-- ── ABOUT HERO ── -->
+<div class="about-hero">
+  <p class="about-eyebrow">THE STORY BEHIND THE NAME</p>
+  <h1 class="about-title">ALCHEMY <em>JOON</em></h1>
+  <p class="about-sub">HAIR · NAIL · LASH · ตลาดใบบัว วงศ์สว่าง</p>
+  <div class="gold-line"></div>
+</div>
+
+<!-- ── CONTENT ── -->
+<div class="about-body">
+
+  <!-- Opening pull-quote -->
+  <div class="about-opening reveal">
+    <p class="about-opening-th">
+      คุณรู้จักความรู้สึกนั้นไหม —<br>
+      วันที่ออกจากร้านแล้วเดินต่างออกไป<br>
+      ไม่ใช่เพราะทรงผมเปลี่ยน<br>
+      แต่เพราะบางอย่างข้างในถูกปรับจูนกลับเข้าที่
+    </p>
+    <p class="about-founder-line">
+      แจน ผู้ก่อตั้ง Alchemy Joon อยากให้คุณได้รู้สึกแบบนั้นทุกครั้งที่ออกจากร้านของเธอ
+    </p>
+  </div>
+
+  <!-- Founder story -->
+  <div class="about-section reveal" style="transition-delay:.1s">
+    <p class="about-p">
+      ก่อนที่จะเปิดร้านนี้ เธอนั่งอยู่ในร้านทำผมหลายแห่ง ในฐานะลูกค้าบ้าง ช่างบ้าง
+      และสังเกตเห็นสิ่งเดิมซ้ำๆ — ร้านที่ทำได้สวย แต่ทำให้รู้สึกเร่งรีบ
+      ร้านที่อบอุ่น แต่ราคาไม่เคยชัดเจน ร้านที่ถูก แต่ดูแลคุณเหมือนเป็นคิวถัดไป ไม่ใช่คนที่นั่งอยู่ตรงหน้า
+    </p>
+    <p class="about-p">
+      เธอไม่ได้มองหาความสมบูรณ์แบบ เธอแค่มองหาที่ที่รู้สึกว่า <em style="font-family:'Noto Serif Thai',serif;color:var(--sg-deep)">มีคนฟัง</em>
+    </p>
+    <p class="about-p">
+      และเมื่อหาไม่เจอในย่านที่เธออยู่ เธอจึงสร้างมันขึ้นมาเอง
+    </p>
+  </div>
+
+  <!-- Alchemy -->
+  <div class="about-section reveal" style="transition-delay:.15s">
+    <h2 class="about-section-label">Alchemy <span class="label-th">การเล่นแร่แปรธาตุ</span></h2>
+    <p class="about-p">
+      การเล่นแร่แปรธาตุ คือศาสตร์ของการแปลงสิ่งที่มีอยู่แล้วให้กลายเป็นสิ่งที่ดีที่สุดของมัน
+      นักเล่นแร่แปรธาตุไม่ได้สร้างทองจากความว่างเปล่า —
+      พวกเขาเชื่อว่าทองนั้นซ่อนอยู่ในตัวแร่ธาตุทุกชิ้นอยู่แล้ว รอเพียงคนที่เข้าใจ และรู้วิธีดึงมันออกมา
+    </p>
+  </div>
+
+  <!-- Joon -->
+  <div class="about-section reveal" style="transition-delay:.2s">
+    <h2 class="about-section-label">Joon <span class="label-th">จูน</span></h2>
+    <p class="about-p">
+      มาจากคำว่า <em style="font-family:'Noto Serif Thai',serif;color:var(--sg-deep)">"จูน"</em> —
+      เหมือนการจูนเครื่องดนตรีก่อนขึ้นเวที
+      ไม่ใช่เพราะมันพัง แต่เพราะมันสมควรได้ยินในแบบที่ดีที่สุดของตัวเอง
+    </p>
+    <p class="about-p">
+      ช่างของเราทำงานแบบเดียวกัน — ฟังก่อนพูด มองก่อนลงมือ
+      แล้วค่อยๆ ปรับจูนจนคุณดูออกมาตรงกับสิ่งที่คุณรู้สึกอยู่ข้างใน
+    </p>
+  </div>
+
+  <!-- Core statement -->
+  <div class="about-statement reveal" style="transition-delay:.25s">
+    <p class="about-statement-th">
+      เราไม่ได้เปลี่ยน <em>"คุณ"</em> ให้เป็นคนอื่น —<br>
+      เราแค่ช่วยให้คุณเป็นตัวเองได้ชัดขึ้น
+    </p>
+  </div>
+
+  <!-- Why Wongsawang -->
+  <div class="about-section reveal" style="transition-delay:.3s">
+    <h2 class="about-section-label">ตลาดใบบัว วงศ์สว่าง <span class="label-th">สถานที่</span></h2>
+    <p class="about-p">
+      เธอเลือกตั้งร้านที่ตลาดใบบัว วงศ์สว่างอย่างตั้งใจ
+      เพราะเชื่อว่าร้านที่ดีไม่ควรอยู่แค่ในห้าง
+      ราคาที่ยุติธรรมและประสบการณ์ที่มีคุณค่าควรอยู่ใกล้บ้านคุณ ในย่านที่คุณใช้ชีวิตทุกวัน
+    </p>
+    <p class="about-p">
+      ทุกอย่างในร้านถูกออกแบบด้วยความตั้งใจ — ตั้งแต่แสงที่ไม่แรงเกินไป
+      ไปจนถึงวิธีที่ช่างของเราฟังก่อนพูด และราคาที่เขียนไว้ชัดเจนตั้งแต่ต้น
+      เพราะเธอเชื่อว่าความไว้วางใจเริ่มต้นจากความโปร่งใส ไม่ใช่จากส่วนลด
+    </p>
+  </div>
+
+  <!-- Three pillars -->
+  <div class="reveal" style="transition-delay:.35s">
+    <div class="about-pillars">
+      <div class="pillar">
+        <p class="pillar-name">Hair</p>
+        <p class="pillar-th">สามบทของการดูแลตัวเอง</p>
+      </div>
+      <div class="pillar">
+        <p class="pillar-name">Nail</p>
+        <p class="pillar-th">ไม่ใช่เพราะต้องการเป็นคนอื่น</p>
+      </div>
+      <div class="pillar">
+        <p class="pillar-name">Lash</p>
+        <p class="pillar-th">แต่เพราะบางครั้งความมั่นใจต้องการแค่การถูกเตือน</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Closing -->
+  <div class="about-closing reveal" style="transition-delay:.4s">
+    <p class="about-closing-th">"แล้วพบกันที่ร้าน ✦"</p>
+    <p class="about-closing-sign">— แจน และทีม Alchemy Joon</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="about-cta-row reveal" style="transition-delay:.45s">
+    <a href="index.html#booking" class="btn-primary">จอง Appointment →</a>
+    <a href="index.html#gallery" class="btn-secondary">ดูผลงาน</a>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo-wrap">
+        <img src="images/ALCHEMY_JOON_Logo2white.png" alt="Alchemy Joon" class="footer-logo-img"
+             onerror="this.style.display:'none';this.nextElementSibling.style.display='block'">
+        <p class="footer-logo-text" style="display:none">ALCHEMY <span>JOON</span></p>
+      </div>
+      <p class="footer-emotion">"จนกว่าจะพบกันอีกครั้ง<br>ขอให้คุณรู้สึกดีกับตัวเอง ✦"</p>
+      <p class="footer-sign">THE REFINED ALCHEMIST · 2026</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">SERVICES</p>
+      <ul class="footer-links">
+        <li><a href="index.html#services">Hair</a></li>
+        <li><a href="index.html#services">Nail</a></li>
+        <li><a href="index.html#services">Lash</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">VISIT</p>
+      <ul class="footer-links">
+        <li><a href="index.html#location">ตลาดใบบัว Zone D D10-D11</a></li>
+        <li><a href="index.html#location">MRT วงศ์สว่าง 300ม.</a></li>
+        <li><a href="index.html#location">เปิด 10:00–22:00</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">SOCIAL</p>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/alchemyjoon/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="https://lin.ee/9pr6YMM" target="_blank" rel="noopener">LINE OA</a></li>
+        <li><a href="#">GoWabi</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Alchemy Joon · ตลาดใบบัว วงศ์สว่าง</p>
+    <p class="footer-copy">Hair · Nail · Lash ✦</p>
+  </div>
+</footer>
+
+<script>
+/* Scroll reveal */
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
