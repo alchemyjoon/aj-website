@@ -7,11 +7,12 @@
 <link rel="icon" href="images/AlchemyJoon_SymbolLogo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Anuphan:wght@200;300;400&family=Noto+Serif+Thai:wght@200;300;400&family=Noto+Sans+Thai:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Trirong:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
+  /* ── Brand colours ── */
   --ink:      #141414;
   --sg-deep:  #2A3D2E;
   --sg:       #4A6741;
@@ -22,6 +23,35 @@
   --cream:    #F6F2E8;
   --muted:    #7A8A7A;
   --sage-pale:#C8E8B8;
+
+  /* ── Typography tokens (Design Language System 03) ── */
+  --font-display: 'Marcellus', 'Trirong', serif;
+  --font-body:    'DM Sans', 'IBM Plex Sans Thai', sans-serif;
+
+  --t-xs:   11px;
+  --t-sm:   13px;
+  --t-base: 16px;
+  --t-md:   20px;
+  --t-lg:   25px;
+  --t-xl:   31px;
+  --t-2xl:  39px;
+  --t-3xl:  49px;
+
+  --fw-display: 400;
+  --fw-light:   300;
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold:600;
+
+  --lh-tight:   1.15;
+  --lh-snug:    1.3;
+  --lh-body:    1.6;
+  --lh-body-th: 1.7;
+
+  --ls-display: 0.03em;
+  --ls-body:    0em;
+  --ls-label:   0.12em;
+  --ls-eyebrow: 0.2em;
 }
 
 html { scroll-behavior: smooth; }
@@ -30,26 +60,26 @@ body {
   background: var(--cream);
   color: var(--ink);
   /* EN body: Avenir stack (system), TH body: Anuphan via .th-body / default */
-  font-family: 'Avenir Next', 'Avenir', 'Century Gothic', 'Trebuchet MS', sans-serif;
+  font-family: 'DM Sans', 'IBM Plex Sans Thai', sans-serif;
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
 }
-/* Thai body text: Anuphan (Canva-match) */
+/* Thai body text: Noto Serif Thai */
 .th, p:lang(th), [lang="th"], .thai {
-  font-family: 'Anuphan', 'Noto Sans Thai', sans-serif;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
 }
-/* Heading TH: Noto Serif Thai */
+/* Heading TH: Anuphan */
 .th-serif {
-  font-family: 'Noto Serif Thai', serif;
+  font-family: 'Trirong', serif;
 }
-/* Force Anuphan on Thai UI elements */
+/* Force Noto Serif Thai on Thai UI/body elements */
 .section-desc, .service-desc, .why-text-body, .review-text,
 .location-addr, .hours-item, .toast-text, .ticker-item,
 .hero-tagline, .booking-title-th, .gallery-cta-text,
 .footer-emotion, .gallery-desc, .anchor-chip,
 .why-slot-spec, .why-slot-quote, .booking-guarantee {
-  font-family: 'Anuphan', 'Noto Sans Thai', sans-serif;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
 }
 
 /* ─────────────────────────────────────────
@@ -115,7 +145,7 @@ nav {
   object-fit: contain; display: block;
 }
 .nav-logo-fallback {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: 18px; color: var(--cream);
   letter-spacing: 0.15em;
   display: flex; align-items: center; gap: 6px;
@@ -257,7 +287,7 @@ nav {
   opacity: 0; animation: fadeUp 0.9s 0.2s forwards;
 }
 .hero-wordmark {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: clamp(40px, 5vw, 72px);
   color: var(--cream);
   line-height: 1.05; letter-spacing: 0.06em;
@@ -266,7 +296,7 @@ nav {
 }
 .hero-wordmark em { font-style: normal; color: var(--gold); }
 .hero-sub {
-  font-weight: 200; font-size: 11px; letter-spacing: 0.25em;
+  font-weight: 300; font-size: 11px; letter-spacing: 0.25em;
   color: var(--muted); margin-bottom: 32px;
   opacity: 0; animation: fadeUp 0.9s 0.55s forwards;
 }
@@ -277,13 +307,13 @@ nav {
   opacity: 0; animation: fadeUp 0.9s 0.65s forwards;
 }
 .hero-tagline {
-  font-family: 'Noto Serif Thai', serif; font-weight: 200;
+  font-family: 'Trirong', serif; font-weight: 400;
   font-size: clamp(18px, 2.5vw, 28px);
   color: var(--sage-pale); margin-bottom: 8px;
   opacity: 0; animation: fadeUp 0.9s 0.75s forwards;
 }
 .hero-tagline-en {
-  font-family: 'Marcellus', serif; font-size: 13px;
+  font-family: 'Marcellus', 'Trirong', serif; font-size: 13px;
   color: rgba(200,232,184,0.45); letter-spacing: 0.12em;
   margin-bottom: 48px;
   opacity: 0; animation: fadeUp 0.9s 0.85s forwards;
@@ -302,7 +332,7 @@ nav {
   opacity: 0;
   animation: fadeUp 0.9s 1.15s forwards;
   display: flex; align-items: center; gap: 8px;
-  font-family: 'Anuphan', sans-serif;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
 }
 .hero-slots-nudge::before {
   content: '';
@@ -316,7 +346,7 @@ nav {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--gold), var(--gold-lt), var(--gold));
-  color: var(--ink); font-family: 'Anuphan', sans-serif;
+  color: var(--ink); font-family: 'IBM Plex Sans Thai', sans-serif;
   font-size: 13px; font-weight: 400; letter-spacing: 0.1em;
   padding: 14px 36px; border-radius: 40px; border: none;
   cursor: pointer; text-decoration: none; display: inline-block;
@@ -325,7 +355,7 @@ nav {
 .btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
 .btn-secondary {
   background: transparent; color: var(--cream);
-  font-family: 'Anuphan', sans-serif;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
   font-size: 13px; letter-spacing: 0.1em;
   padding: 13px 36px; border-radius: 40px;
   border: 1px solid rgba(246,242,232,0.25);
@@ -337,7 +367,7 @@ nav {
 .btn-sage {
   background: var(--sg);
   color: var(--cream);
-  font-family: 'Anuphan', sans-serif;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -409,7 +439,7 @@ nav {
 }
 .intro-stat:last-child { border-right: none; }
 .intro-stat-num {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: 36px; color: var(--gold);
   display: block; margin-bottom: 4px;
 }
@@ -514,8 +544,8 @@ nav {
   flex-wrap: wrap;
 }
 .gallery-cta-text {
-  font-family: 'Noto Serif Thai', serif;
-  font-weight: 200; font-size: 15px;
+  font-family: 'Trirong', serif;
+  font-weight: 400; font-size: 15px;
   color: var(--muted);
   font-style: italic;
 }
@@ -583,11 +613,11 @@ nav {
 
 .service-body { padding: 0 32px; }
 .service-name {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: 20px; color: var(--ink); margin-bottom: 4px;
 }
 .service-name-th {
-  font-family: 'Noto Serif Thai', serif; font-weight: 300;
+  font-family: 'Trirong', serif; font-weight: 400;
   font-size: 12px; color: var(--sg); letter-spacing: 0.05em;
   margin-bottom: 12px;
 }
@@ -601,7 +631,7 @@ nav {
 }
 .price-label { font-size: 10px; letter-spacing: 0.15em; color: var(--muted); }
 .price-value {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: 15px; color: var(--gold);
 }
 
@@ -631,7 +661,7 @@ nav {
   font-size: 12px;
   color: #C0D0C0;      /* readable on dark bg ✓ */
   line-height: 1.8;
-  font-family: 'Anuphan', 'Noto Sans Thai', sans-serif;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
   align-self: flex-end;
   max-width: 340px;
 }
@@ -666,7 +696,7 @@ nav {
 }
 .price-item:last-child { border-bottom: none; }
 .price-item-name { color: rgba(246,242,232,0.65); }
-.price-item-val { color: var(--gold); font-family: 'Marcellus', serif; font-size: 13px; }
+.price-item-val { color: var(--gold); font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 300; font-size: 13px; }
 /* Anchor highlight: most popular item */
 .price-item.featured {
   background: rgba(200,160,74,0.06);
@@ -736,7 +766,7 @@ nav {
   pointer-events: none;
 }
 .stylist-slot-icon {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: 36px; color: rgba(200,160,74,0.2);
 }
 .stylist-slot-label {
@@ -759,7 +789,7 @@ nav {
 
 .stylist-info { padding: 20px 20px 24px; }
 .stylist-name {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: 16px; margin-bottom: 2px;
 }
 .stylist-role {
@@ -781,7 +811,7 @@ nav {
   background: transparent;
   border: 1px solid rgba(200,160,74,0.3);
   color: var(--gold);
-  font-family: 'Anuphan', sans-serif;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
   font-size: 11px; letter-spacing: 0.12em;
   padding: 10px 0; border-radius: 3px;
   cursor: pointer; text-decoration: none;
@@ -831,8 +861,8 @@ nav {
 }
 .review-stars { color: var(--gold); font-size: 13px; margin-bottom: 12px; letter-spacing: 2px; }
 .review-text {
-  font-family: 'Noto Serif Thai', serif;
-  font-weight: 200; font-size: 13px;
+  font-family: 'Trirong', serif;
+  font-weight: 400; font-size: 13px;
   color: var(--cream); line-height: 1.8;
   margin-bottom: 16px; font-style: italic;
 }
@@ -854,7 +884,7 @@ nav {
   border: 1px solid rgba(200,160,74,0.3);
   display: flex; align-items: center; justify-content: center;
   font-size: 12px; color: var(--gold);
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   flex-shrink: 0;
   overflow: hidden; position: relative;
 }
@@ -875,6 +905,10 @@ nav {
    WHY US
 ───────────────────────────────────────── */
 #why { background: var(--linen); }
+#why .section-title {
+  font-family: 'Trirong', serif;
+  font-weight: 400; font-size: clamp(28px, 4vw, 40px);
+}
 .why-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 60px; align-items: center; margin-top: 64px;
@@ -888,59 +922,28 @@ nav {
 }
 .why-item:last-child { border-bottom: none; }
 .why-num {
-  font-family: 'Marcellus', serif;
-  font-size: 30px; color: rgba(200,160,74,0.2);
+  font-family: 'Marcellus', 'Trirong', serif;
+  font-size: 30px; color: #C8A04A;
   line-height: 1; flex-shrink: 0; width: 40px;
 }
 .why-text-head {
-  font-family: 'Marcellus', serif;
-  font-size: 16px; color: var(--ink); margin-bottom: 4px;
+  font-family: 'Trirong', serif;
+  font-weight: 400; font-size: 17px;
+  color: var(--ink); margin-bottom: 6px;
 }
-.why-text-body { font-size: 13px; color: #6B6B6B; line-height: 1.75; }
-
-/* ── IMAGE SLOT: Interior / atmosphere ──
-   Psychology: Mental simulation
-   People who can picture themselves IN the space
-   are more likely to visit (simulation heuristic)
-   Spec: Wide-angle interior shot of salon,
-   warm lighting, apothecary props visible,
-   NO people (let visitor imagine themselves)
-   Ratio: 3:2 landscape, dark + moody
-   ─────────────────────────────────────── */
+.why-text-head em { font-style: normal; color: #C8A04A; }
+.why-text-body {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-weight: 300; font-size: 12px;
+  color: #6B6B6B; line-height: 1.7;
+}
+.why-text-body strong { color: #C8A04A; font-weight: 300; }
 .why-img-slot {
   border-radius: 4px;
   overflow: hidden;
   aspect-ratio: 3/2;
-  background: linear-gradient(160deg, var(--sg-deep), var(--sg));
-  position: relative;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 12px; padding: 32px;
-  text-align: center;
+  background: var(--sg-deep) url('images/interior.png') center/cover no-repeat;
 }
-.why-img-slot::before {
-  content: '';
-  position: absolute; inset: 12px;
-  border: 1px dashed rgba(200,160,74,0.2);
-  pointer-events: none;
-}
-.why-slot-label {
-  font-size: 9px; letter-spacing: 0.2em;
-  color: var(--gold); position: relative; z-index: 1;
-}
-.why-slot-spec {
-  font-size: 11px; color: rgba(200,232,184,0.4);
-  line-height: 1.8; max-width: 200px;
-  position: relative; z-index: 1;
-}
-.why-slot-quote {
-  margin-top: 16px;
-  font-family: 'Noto Serif Thai', serif;
-  font-weight: 200; font-size: 16px;
-  color: var(--cream); line-height: 1.7;
-  position: relative; z-index: 1;
-}
-.why-slot-quote em { font-style: normal; color: var(--sage-pale); }
 
 /* ─────────────────────────────────────────
    BOOKING CTA
@@ -962,18 +965,18 @@ nav {
   background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(200,160,74,0.06) 0%, transparent 70%);
 }
 .booking-mark {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: 10px; letter-spacing: 0.3em;
   color: var(--gold); margin-bottom: 32px; position: relative;
 }
 .booking-title {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: clamp(32px, 5vw, 56px);
   color: var(--cream); line-height: 1.1;
   margin-bottom: 8px; position: relative;
 }
 .booking-title-th {
-  font-family: 'Noto Serif Thai', serif; font-weight: 200;
+  font-family: 'Trirong', serif; font-weight: 400;
   font-size: clamp(16px, 2.5vw, 24px);
   color: var(--sage-pale); margin-bottom: 16px; position: relative;
 }
@@ -1014,7 +1017,7 @@ nav {
   border-radius: 50%;
   border: 1px solid rgba(200,160,74,0.3);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Marcellus', serif; font-size: 13px;
+  font-family: 'Marcellus', 'Trirong', serif; font-size: 13px;
   color: var(--gold);
 }
 .step-label { font-size: 10px; letter-spacing: 0.1em; color: var(--muted); }
@@ -1030,7 +1033,7 @@ nav {
   border: 1px solid rgba(200,160,74,0.2);
   color: var(--cream);
   padding: 14px 28px; border-radius: 40px;
-  font-family: 'Anuphan', sans-serif;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
   font-size: 13px; letter-spacing: 0.05em;
   cursor: pointer; text-decoration: none;
   transition: background 0.25s, border-color 0.25s;
@@ -1083,7 +1086,7 @@ nav {
 }
 .location-addr {
   font-size: 13px; color: var(--sage-pale);
-  line-height: 2; font-weight: 200;
+  line-height: 2; font-weight: 300;
 }
 .location-mrt {
   font-size: 10px; letter-spacing: 0.15em; color: var(--gold);
@@ -1119,14 +1122,14 @@ footer {
 .footer-logo-wrap { margin-bottom: 14px; }
 .footer-logo-img { height: 36px; width: auto; object-fit: contain; display: block; }
 .footer-logo-text {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: 22px; color: var(--cream); display: none;
 }
 .footer-logo-text span { color: var(--gold); }
 /* Peak-end: emotional close */
 .footer-emotion {
-  font-family: 'Noto Serif Thai', serif;
-  font-weight: 200; font-size: 13px;
+  font-family: 'Trirong', serif;
+  font-weight: 400; font-size: 13px;
   color: var(--muted); line-height: 1.8;
   font-style: italic; max-width: 220px;
   margin-bottom: 20px;
@@ -1176,7 +1179,7 @@ footer {
 .ig-btn {
   width: 48px; height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  background: #F6F2E8;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
   cursor: pointer; text-decoration: none;
@@ -1198,15 +1201,15 @@ section { padding: 100px 5vw; }
   text-transform: uppercase;
 }
 .section-title {
-  font-family: 'Marcellus', serif;
+  font-family: 'Marcellus', 'Trirong', serif;
   font-size: clamp(26px, 3.5vw, 42px);
   line-height: 1.15; margin-bottom: 14px;
 }
 .section-desc {
   font-size: 14px; color: #6B6B6B;
   max-width: 480px; line-height: 1.85;
-  font-weight: 200;
-  font-family: 'Anuphan', 'Noto Sans Thai', sans-serif;
+  font-weight: 300;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
 }
 /* Unified section header: eyebrow + title + desc stacked */
 .section-header {
@@ -1254,6 +1257,7 @@ section { padding: 100px 5vw; }
   #hero { grid-template-columns: 1fr; }
   .hero-right { display: none; }
   .hero-left { padding: 100px 5vw 80px; text-align: center; }
+  .gold-line { margin: 0 auto; }
   .hero-buttons { justify-content: center; }
   .hero-slots-nudge { justify-content: center; }
   .services-header { grid-template-columns: 1fr; }
@@ -1270,10 +1274,59 @@ section { padding: 100px 5vw; }
   .img-slot.s5 { grid-column: 1/4; grid-row: 4/5; }
   .img-slot.s6 { grid-column: 4/7; grid-row: 4/5; }
   .img-slot.s7 { grid-column: 1/7; grid-row: 5/6; }
-  .pricing-grid { grid-template-columns: 1fr 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
   .stylist-grid { grid-template-columns: 1fr 1fr; }
   #toast { left: 12px; right: 12px; max-width: none; bottom: 16px; }
 }
+
+/* ─────────────────────────────────────────
+   LIVE IMAGES — activated slots
+───────────────────────────────────────── */
+
+/* Hero */
+.hero-img-slot { background-image: url('images/hero.png'); background-size: cover; background-position: center top; }
+.hero-img-slot .img-placeholder { display: none; }
+
+/* Gallery mosaic */
+.img-slot.s1 { background-image: url('images/Gallery/gallery-s1.jpg'); background-size: cover; background-position: center; }
+.img-slot.s2 { background-image: url('images/Gallery/gallery-s2.jpg'); background-size: cover; background-position: center; }
+.img-slot.s3 { background-image: url('images/Gallery/gallery-s3.jpg'); background-size: cover; background-position: center; }
+.img-slot.s4 { background-image: url('images/Gallery/gallery-s4.jpg'); background-size: cover; background-position: center; }
+.img-slot.s5 { background-image: url('images/Gallery/gallery-s5.png'); background-size: cover; background-position: center; }
+.img-slot.s6 { background-image: url('images/Gallery/gallery-s6.jpg'); background-size: cover; background-position: center; }
+.img-slot.s7 { background-image: url('images/Gallery/gallery-s7.jpg'); background-size: cover; background-position: center; }
+.img-slot.s1 .img-slot-inner,
+.img-slot.s2 .img-slot-inner,
+.img-slot.s3 .img-slot-inner,
+.img-slot.s4 .img-slot-inner,
+.img-slot.s5 .img-slot-inner,
+.img-slot.s6 .img-slot-inner,
+.img-slot.s7 .img-slot-inner { display: none; }
+
+/* Service cards */
+.services-grid .service-card:nth-child(1) .service-img-slot { background-image: url('images/Service/service-hair.jpg'); background-size: cover; background-position: center; }
+.services-grid .service-card:nth-child(2) .service-img-slot { background-image: url('images/Service/service-nail.jpg'); background-size: cover; background-position: center; }
+.services-grid .service-card:nth-child(3) .service-img-slot { background-image: url('images/Service/service-lash.jpg'); background-size: cover; background-position: center; }
+.services-grid .service-card:nth-child(1) .service-img-slot > *,
+.services-grid .service-card:nth-child(2) .service-img-slot > *,
+.services-grid .service-card:nth-child(3) .service-img-slot > * { display: none; }
+.services-grid .service-card:nth-child(1) .service-img-slot::before,
+.services-grid .service-card:nth-child(2) .service-img-slot::before,
+.services-grid .service-card:nth-child(3) .service-img-slot::before { display: none; }
+
+/* Stylist portraits */
+.stylist-grid .stylist-card:nth-child(1) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist1.png'); background-size: cover; background-position: center top; }
+.stylist-grid .stylist-card:nth-child(2) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist2.png'); background-size: cover; background-position: center top; }
+.stylist-grid .stylist-card:nth-child(3) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist3.png'); background-size: cover; background-position: center top; }
+.stylist-grid .stylist-card:nth-child(4) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist4.png'); background-size: cover; background-position: center top; }
+.stylist-grid .stylist-card:nth-child(1) .stylist-img-slot > *,
+.stylist-grid .stylist-card:nth-child(2) .stylist-img-slot > *,
+.stylist-grid .stylist-card:nth-child(3) .stylist-img-slot > *,
+.stylist-grid .stylist-card:nth-child(4) .stylist-img-slot > * { display: none; }
+.stylist-grid .stylist-card:nth-child(1) .stylist-img-slot::before,
+.stylist-grid .stylist-card:nth-child(2) .stylist-img-slot::before,
+.stylist-grid .stylist-card:nth-child(3) .stylist-img-slot::before,
+.stylist-grid .stylist-card:nth-child(4) .stylist-img-slot::before { display: none; }
 </style>
 </head>
 <body>
@@ -1289,7 +1342,7 @@ section { padding: 100px 5vw; }
 
 <!-- ─── FLOATING IG ─── -->
 <div id="ig-bubble">
-  <a href="https://www.instagram.com/alchemyjoon/" class="ig-btn" target="_blank" title="Follow us on Instagram">📷</a>
+  <a href="https://www.instagram.com/alchemyjoon" class="ig-btn" target="_blank" title="Follow us on Instagram"><img src="images/Instagram_logo.svg" alt="Instagram" width="22" height="22"></a>
   <span class="ig-label">@alchemyjoon</span>
 </div>
 
@@ -1585,35 +1638,37 @@ section { padding: 100px 5vw; }
   <div class="pricing-grid reveal" style="transition-delay:.2s">
     <div class="price-col">
       <p class="price-col-head">HAIR — ผม</p>
-      <div class="price-item"><span class="price-item-name">สระ + ไดร์</span><span class="price-item-val">299–450 บาท</span></div>
-      <div class="price-item"><span class="price-item-name">ตัดผม (หญิง)</span><span class="price-item-val">499–1,290 บาท</span></div>
-      <div class="price-item featured"><span class="price-item-name">สีโคน <span class="price-popular">POPULAR</span></span><span class="price-item-val">1,990–2,500 บาท</span></div>
-      <div class="price-item"><span class="price-item-name">ไฮไลท์ / บาลายาจ</span><span class="price-item-val">3,500–6,000 บาท</span></div>
-      <div class="price-item featured"><span class="price-item-name">ดัดดิจิทัล <span class="price-popular">POPULAR</span></span><span class="price-item-val">3,500–5,500 บาท</span></div>
-      <div class="price-item"><span class="price-item-name">ยืด / รีบอนด์</span><span class="price-item-val">3,500–6,500 บาท</span></div>
-    </div>
-    <div class="price-col">
-      <p class="price-col-head">TREATMENT</p>
-      <div class="price-item featured"><span class="price-item-name">Olaplex Bond Repair <span class="price-popular">แนะนำ</span></span><span class="price-item-val">890–1,490 บาท</span></div>
-      <div class="price-item"><span class="price-item-name">K18 Leave-in</span><span class="price-item-val">690–990 บาท</span></div>
-      <div class="price-item"><span class="price-item-name">Deep Conditioning</span><span class="price-item-val">500–900 บาท</span></div>
-      <div class="price-item"><span class="price-item-name">Scalp Treatment</span><span class="price-item-val">800–1,500 บาท</span></div>
+      <div class="price-item"><span class="price-item-name">สระ + ไดร์ <small style="opacity:.5;font-size:10px">(นักศึกษา 350)</small></span><span class="price-item-val">฿ 390</span></div>
+      <div class="price-item"><span class="price-item-name">ตัดผมหญิง + สระไดร์</span><span class="price-item-val">฿ 690</span></div>
+      <div class="price-item"><span class="price-item-name">ตัดผมชาย</span><span class="price-item-val">฿ 290</span></div>
+      <div class="price-item"><span class="price-item-name">ตัดผมเด็ก</span><span class="price-item-val">฿ 290</span></div>
+      <div class="price-item"><span class="price-item-name">ย้อมสีโคน / ทั้งหัว</span><span class="price-item-val">฿ 1,990</span></div>
+      <div class="price-item featured"><span class="price-item-name">Signature Color <span class="price-popular">SIGNATURE</span></span><span class="price-item-val">฿ 2,490</span></div>
+      <div class="price-item"><span class="price-item-name">ไฮไลท์ / บาลายาจ / บลีช</span><span class="price-item-val">฿ 3,990</span></div>
+      <div class="price-item"><span class="price-item-name">ดัดดิจิทัล / ยืด-รีบอนด์</span><span class="price-item-val">฿ 3,490</span></div>
+      <div class="price-item featured"><span class="price-item-name">Personal Potion <span class="price-popular">SIGNATURE</span></span><span class="price-item-val">฿ 1,290</span></div>
+      <div class="price-item"><span class="price-item-name">Olaplex/K18 + สปาหนังศีรษะ</span><span class="price-item-val">฿ 990</span></div>
     </div>
     <div class="price-col">
       <p class="price-col-head">NAIL — เล็บ</p>
-      <div class="price-item"><span class="price-item-name">เจลสีเดียว</span><span class="price-item-val">350–550 บาท</span></div>
-      <div class="price-item featured"><span class="price-item-name">French / Ombre <span class="price-popular">POPULAR</span></span><span class="price-item-val">450–700 บาท</span></div>
-      <div class="price-item"><span class="price-item-name">เล็บอาร์ต</span><span class="price-item-val">600–1,200 บาท</span></div>
-      <div class="price-item"><span class="price-item-name">ถอดเล็บ</span><span class="price-item-val">150–250 บาท</span></div>
+      <div class="price-item"><span class="price-item-name">ทาสีเจล มือ</span><span class="price-item-val">฿ 550</span></div>
+      <div class="price-item"><span class="price-item-name">ทาสีเจล เท้า</span><span class="price-item-val">฿ 650</span></div>
+      <div class="price-item"><span class="price-item-name">ต่อเล็บเจล / PVC (เต็มชุด)</span><span class="price-item-val">฿ 1,190</span></div>
+      <div class="price-item"><span class="price-item-name">ต่อเล็บอะคริลิค</span><span class="price-item-val">฿ 1,390</span></div>
+      <div class="price-item"><span class="price-item-name">สปามือ/เท้า + ตัดหนัง</span><span class="price-item-val">฿ 450</span></div>
+      <div class="price-item"><span class="price-item-name">ถอด / ล้างเล็บ</span><span class="price-item-val">฿ 150</span></div>
     </div>
     <div class="price-col">
-      <p class="price-col-head">LASH</p>
-      <div class="price-item"><span class="price-item-name">Classic Lash</span><span class="price-item-val">399–599 บาท</span></div>
-      <div class="price-item featured"><span class="price-item-name">Volume Lash <span class="price-popular">POPULAR</span></span><span class="price-item-val">599–899 บาท</span></div>
-      <div class="price-item"><span class="price-item-name">Mega Volume</span><span class="price-item-val">799–1,099 บาท</span></div>
+      <p class="price-col-head">LASH / BROW — ขนตา / คิ้ว</p>
+      <div class="price-item"><span class="price-item-name">ต่อขนตา Classic</span><span class="price-item-val">฿ 650</span></div>
+      <div class="price-item"><span class="price-item-name">ต่อขนตา Hybrid</span><span class="price-item-val">฿ 950</span></div>
+      <div class="price-item featured"><span class="price-item-name">ต่อขนตา Volume <span class="price-popular">POPULAR</span></span><span class="price-item-val">฿ 1,290</span></div>
+      <div class="price-item"><span class="price-item-name">รีฟิลขนตา (2–3 สัปดาห์)</span><span class="price-item-val">฿ 450</span></div>
+      <div class="price-item"><span class="price-item-name">Lash Lift + ย้อม</span><span class="price-item-val">฿ 790</span></div>
+      <div class="price-item"><span class="price-item-name">ออกแบบ / แว็กซ์คิ้ว</span><span class="price-item-val">฿ 390</span></div>
     </div>
   </div>
-  <p class="pricing-note reveal" style="transition-delay:.3s; margin-top:20px; text-align:center; font-size:11px; color:var(--muted); letter-spacing:.06em;">Senior Stylist ราคาสูงกว่า 20–30% · นักศึกษา มจพ./มทร. มีส่วนลด 10% (แสดงบัตร)</p>
+  <p class="pricing-note reveal" style="transition-delay:.3s; margin-top:20px; text-align:center; font-size:11px; color:var(--muted); letter-spacing:.06em;">ราคาที่แสดงเป็นราคา Grand Opening · Signature Color & Personal Potion — ผสมสดต่อหน้าเฉพาะคุณ</p>
 </section>
 
 <!-- ─── STYLIST PROFILES ─── -->
@@ -1819,72 +1874,43 @@ section { padding: 100px 5vw; }
   <div class="section-header reveal">
     <div>
       <p class="section-eyebrow">WHY ALCHEMY JOON</p>
-      <h2 class="section-title">ทำไมต้องเลือกเรา</h2>
+      <h2 class="section-title">ผมสวย ไม่ต้องแลกกับผมเสีย</h2>
     </div>
-    <p class="section-desc">เราไม่ได้แค่ทำผม เราออกแบบประสบการณ์ที่ทำให้คุณรู้สึกดีกับตัวเองทุกครั้งที่ออกจากร้าน</p>
+    <p class="section-desc">ที่นี่ทุกการเปลี่ยนสีมาพร้อม bond protection — เพราะผมสวยที่แท้จริงต้องแข็งแรงด้วย</p>
   </div>
   <div class="why-grid">
     <ul class="why-list">
       <li class="why-item reveal">
         <span class="why-num">01</span>
         <div>
-          <p class="why-text-head">ราคาเปิดเผย ไม่มีเซอร์ไพรส์</p>
-          <p class="why-text-body">ทุกเมนูระบุราคาชัดเจนก่อนเริ่มงาน ไม่มีการบวกค่า treatment กลางทาง</p>
+          <p class="why-text-head">ราคาชัดเจน โปร่งใส <em>ไม่มีเซอร์ไพรส์</em></p>
+          <p class="why-text-body">ประเมินและแจ้งราคาให้ทราบก่อนเริ่มทุกขั้นตอน <strong>หมดกังวลเรื่องค่าใช้จ่ายแอบแฝง ให้คุณสวยได้อย่างสบายใจตั้งแต่ต้นจนจบ</strong></p>
         </div>
       </li>
       <li class="why-item reveal" style="transition-delay:.1s">
         <span class="why-num">02</span>
         <div>
-          <p class="why-text-head">Damage-safe ด้วย Olaplex & K18</p>
-          <p class="why-text-body">ทุก chemical service มาพร้อม bond protection สแตนดาร์ด ผมไม่ช็อต แม้บลีชหลายรอบ</p>
+          <p class="why-text-head">ผมสวยสุขภาพดี <em>ไม่กลัวพัง</em></p>
+          <p class="why-text-body">หมดกังวลเรื่องผมช็อตแม้ฟอกหลายรอบ เพราะทุกบริการเคมีของเรามาพร้อมมาตรฐานการปกป้องเส้นผมระดับโลกด้วย Olaplex & K18 <strong>ปกป้องผมระหว่างทำ ไม่ใช่แค่หลังทำ</strong></p>
         </div>
       </li>
       <li class="why-item reveal" style="transition-delay:.2s">
         <span class="why-num">03</span>
         <div>
-          <p class="why-text-head">จอง — มาถึงได้เลย ไม่ต้องรอ</p>
-          <p class="why-text-body">ระบบจองผ่าน LINE OA และ GoWabi — มี appointment ไม่ต้องนั่งรอ</p>
+          <p class="why-text-head">บริการแบบ Private Booking <em>ไม่ต้องเสียเวลารอ</em></p>
+          <p class="why-text-body">เพราะเวลาของคุณมีค่า ระบบจองคิวของเราจึงล็อกเวลาให้คุณโดยเฉพาะ เดินเข้าร้านแล้ว <strong>รับบริการได้ทันทีโดยไม่ต้องนั่งรอ</strong></p>
         </div>
       </li>
       <li class="why-item reveal" style="transition-delay:.3s">
         <span class="why-num">04</span>
         <div>
-          <p class="why-text-head">Aesthetic ที่ถ่ายรูปลง IG ได้ทุกมุม</p>
-          <p class="why-text-body">ร้านแรกในย่านที่ออกแบบเป็น themed concept Alchemy Apothecary</p>
+          <p class="why-text-head">Aesthetic Space <em>สวยสะกดทุกมุม</em></p>
+          <p class="why-text-body">อดื่มด่ำกับซาลอนคอนเซปต์ Alchemy Apothecary แห่งแรกในย่านนี้ ที่เราตั้งใจออกแบบแสงและสเปซ <strong>ให้คุณถ่ายรูปเช็คอินได้สวยทุกองศา</strong></p>
         </div>
       </li>
     </ul>
 
-    <!-- Interior image: mental simulation trigger -->
-    <div class="reveal" style="transition-delay:.2s">
-      <!--
-      📸 WHY IMAGE: Interior / atmosphere
-      Psychology: Mental simulation
-      คนเห็นรูป interior = จินตนาการตัวเองอยู่ในนั้น
-      = ลด barrier ก่อนเดินเข้าร้านครั้งแรก
-
-      Spec: ✦ Wide-angle interior ร้าน (3:2)
-            ✦ อุปกรณ์ apothecary visible
-            ✦ Lighting: warm, moody, sage green tone
-            ✦ ไม่มีคน — ให้คนดูจินตนาการตัวเอง
-            ✦ Shot angle: กว้าง เห็น vibe ทั้งร้าน
-      วาง: .why-img-slot { background-image: url('interior.jpg'); ... }
-      -->
-      <div class="why-img-slot">
-        <span class="why-slot-label">INTERIOR PHOTO (3:2)</span>
-        <p class="why-slot-spec">
-          Wide-angle interior ร้าน<br>
-          apothecary props visible<br>
-          warm moody lighting<br>
-          <em>ไม่มีคนในรูป</em><br>
-          ให้คนดูจินตนาการตัวเอง
-        </p>
-        <p class="why-slot-quote">
-          "ทุกรายละเอียด<br>
-          <em>คือส่วนหนึ่งของประสบการณ์"</em>
-        </p>
-      </div>
-    </div>
+    <div class="why-img-slot reveal" style="transition-delay:.2s"></div>
   </div>
 </section>
 
@@ -1976,14 +2002,6 @@ section { padding: 100px 5vw; }
         <li><a href="#services">Hair</a></li>
         <li><a href="#services">Nail</a></li>
         <li><a href="#services">Lash</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">VISIT</p>
-      <ul class="footer-links">
-        <li><a href="#location">ตลาดใบบัว Zone D</a></li>
-        <li><a href="#location">MRT วงศ์สว่าง 300ม.</a></li>
-        <li><a href="#location">เปิด 10:00–22:00</a></li>
       </ul>
     </div>
     <div class="footer-col">
