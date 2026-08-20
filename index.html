@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alchemy Joon — ร้านทำผม เล็บ ขนตา ตลาดใบบัว วงศ์สว่าง | Hair · Nail · Lash Bangkok</title>
+<title>Alchemy Joon | ร้านทำผม เล็บ ขนตา ใกล้ MRT วงศ์สว่าง</title>
 
 <!-- SEO -->
-<meta name="description" content="Alchemy Joon ร้านเสริมสวยครบวงจร ผม เล็บ ขนตา ที่ตลาดใบบัว วงศ์สว่าง ใกล้ MRT 300 เมตร บริการ Balayage · Highlight · ดัดดิจิทัล · เล็บเจล · ต่อขนตา พร้อม Olaplex & K18 ทุก service">
+<meta name="description" content="Alchemy Joon ร้าน Hair · Nail · Lash ที่ตลาดใบบัว ใกล้ MRT วงศ์สว่าง 300 เมตร พร้อมบริการสีผม บาลายาจ เล็บเจล และต่อขนตา ดูราคาและจองคิวออนไลน์">
 <meta name="keywords" content="ร้านทำผม วงศ์สว่าง, ร้านเสริมสวย ตลาดใบบัว, Balayage Bangkok, ต่อขนตา วงศ์สว่าง, เล็บเจล บางซื่อ, hair salon Bangkok, Alchemy Joon, Olaplex Thailand">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Alchemy Joon">
@@ -15,8 +15,8 @@
 <!-- Open Graph — link preview (Facebook, Line, WhatsApp, iMessage) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Alchemy Joon">
-<meta property="og:title" content="Alchemy Joon — ร้านทำผม เล็บ ขนตา ตลาดใบบัว วงศ์สว่าง">
-<meta property="og:description" content="ร้านเสริมสวยครบวงจร ผม เล็บ ขนตา ใกล้ MRT วงศ์สว่าง 300 เมตร บริการ Balayage · Highlight · เล็บเจล · ต่อขนตา พร้อม Olaplex & K18">
+<meta property="og:title" content="Alchemy Joon | Hair · Nail · Lash ใกล้ MRT วงศ์สว่าง">
+<meta property="og:description" content="ดูผลงาน ราคา และจองคิวบริการผม เล็บ และขนตา ที่ตลาดใบบัว ใกล้ MRT วงศ์สว่าง 300 เมตร">
 <meta property="og:url" content="https://alchemyjoon.com">
 <meta property="og:image" content="https://alchemyjoon.com/images/section-bg.png">
 <meta property="og:image:width" content="1200">
@@ -26,8 +26,8 @@
 
 <!-- Twitter / X Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Alchemy Joon — ร้านทำผม เล็บ ขนตา ตลาดใบบัว วงศ์สว่าง">
-<meta name="twitter:description" content="ร้านเสริมสวยครบวงจร ผม เล็บ ขนตา ใกล้ MRT วงศ์สว่าง 300 เมตร บริการ Balayage · Highlight · เล็บเจล · ต่อขนตา พร้อม Olaplex & K18">
+<meta name="twitter:title" content="Alchemy Joon | Hair · Nail · Lash ใกล้ MRT วงศ์สว่าง">
+<meta name="twitter:description" content="ดูผลงาน ราคา และจองคิวบริการผม เล็บ และขนตา ที่ตลาดใบบัว ใกล้ MRT วงศ์สว่าง 300 เมตร">
 <meta name="twitter:image" content="https://alchemyjoon.com/images/section-bg.png">
 
 <link rel="icon" href="images/AlchemyJoon_SymbolLogo.png" type="image/png">
@@ -39,7 +39,7 @@
   "@type": "HairSalon",
   "name": "Alchemy Joon",
   "alternateName": "อัลเคมี จูน",
-  "description": "ร้านเสริมสวยครบวงจร ผม เล็บ ขนตา ที่ตลาดใบบัว วงศ์สว่าง บริการ Balayage, Highlight, ดัดดิจิทัล, เล็บเจล, ต่อขนตา พร้อม Olaplex & K18 ทุก chemical service",
+  "description": "ร้านเสริมสวยครบวงจร ผม เล็บ ขนตา ที่ตลาดใบบัว วงศ์สว่าง บริการสีผม บาลายาจ ดัดดิจิทัล เล็บเจล และต่อขนตา พร้อมแจ้งราคาก่อนเริ่มบริการ",
   "url": "https://alchemyjoon.com",
   "image": "https://alchemyjoon.com/images/section-bg.png",
   "logo": "https://alchemyjoon.com/images/ALCHEMY_JOON_Logo2white.png",
@@ -372,10 +372,20 @@ nav {
   font-size: clamp(40px, 5vw, 72px);
   color: var(--cream);
   line-height: 1.05; letter-spacing: 0.06em;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.12em;
+  white-space: nowrap;
   margin-bottom: 4px;
   opacity: 0; animation: fadeUp 0.9s 0.4s forwards;
 }
-.hero-wordmark em { font-style: normal; color: var(--gold); }
+.hero-joon-logo {
+  display: block;
+  width: auto;
+  height: 0.96em;
+  flex-shrink: 0;
+  transform: translateY(-0.01em);
+}
 .hero-sub {
   font-weight: 300; font-size: 11px; letter-spacing: 0.25em;
   color: var(--muted); margin-bottom: 32px;
@@ -1030,7 +1040,7 @@ nav {
    BOOKING CTA
    Psychology: Commitment device — show small
    first step, not overwhelming full commitment.
-   Loss aversion: slot countdown
+   Appointment notice
    Peak-end rule: last thing seen = emotional,
    not transactional
 ───────────────────────────────────────── */
@@ -1338,6 +1348,7 @@ section { padding: 100px 5vw; }
   #hero { grid-template-columns: 1fr; }
   .hero-right { display: none; }
   .hero-left { padding: 100px 5vw 80px; text-align: center; }
+  .hero-wordmark { justify-content: center; }
   .gold-line { margin: 0 auto; }
   .hero-buttons { justify-content: center; }
   .hero-slots-nudge { justify-content: center; }
@@ -1366,7 +1377,6 @@ section { padding: 100px 5vw; }
 
 /* Hero */
 .hero-img-slot { background-image: url('images/hero.png'); background-size: cover; background-position: center top; }
-.hero-img-slot .img-placeholder { display: none; }
 
 /* Gallery mosaic */
 .img-slot.s1 { background-image: url('images/Gallery/gallery-s1.jpg'); background-size: cover; background-position: center; }
@@ -1376,48 +1386,25 @@ section { padding: 100px 5vw; }
 .img-slot.s5 { background-image: url('images/Gallery/gallery-s5.png'); background-size: cover; background-position: center; }
 .img-slot.s6 { background-image: url('images/Gallery/gallery-s6.jpg'); background-size: cover; background-position: center; }
 .img-slot.s7 { background-image: url('images/Gallery/gallery-s7.jpg'); background-size: cover; background-position: center; }
-.img-slot.s1 .img-slot-inner,
-.img-slot.s2 .img-slot-inner,
-.img-slot.s3 .img-slot-inner,
-.img-slot.s4 .img-slot-inner,
-.img-slot.s5 .img-slot-inner,
-.img-slot.s6 .img-slot-inner,
-.img-slot.s7 .img-slot-inner { display: none; }
 
 /* Service cards */
 .services-grid .service-card:nth-child(1) .service-img-slot { background-image: url('images/Service/service-hair.png'); background-size: cover; background-position: center; }
 .services-grid .service-card:nth-child(2) .service-img-slot { background-image: url('images/Service/service-nail.png'); background-size: cover; background-position: center; }
 .services-grid .service-card:nth-child(3) .service-img-slot { background-image: url('images/Service/service-lash.png'); background-size: cover; background-position: center; }
-.services-grid .service-card:nth-child(1) .service-img-slot > *,
-.services-grid .service-card:nth-child(2) .service-img-slot > *,
-.services-grid .service-card:nth-child(3) .service-img-slot > * { display: none; }
-.services-grid .service-card:nth-child(1) .service-img-slot::before,
-.services-grid .service-card:nth-child(2) .service-img-slot::before,
-.services-grid .service-card:nth-child(3) .service-img-slot::before { display: none; }
 
 /* Stylist portraits */
 .stylist-grid .stylist-card:nth-child(1) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist1.png'); background-size: cover; background-position: center top; }
 .stylist-grid .stylist-card:nth-child(2) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist2.png'); background-size: cover; background-position: center top; }
 .stylist-grid .stylist-card:nth-child(3) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist3.png'); background-size: cover; background-position: center top; }
 .stylist-grid .stylist-card:nth-child(4) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist4.png'); background-size: cover; background-position: center top; }
-.stylist-grid .stylist-card:nth-child(1) .stylist-img-slot > *,
-.stylist-grid .stylist-card:nth-child(2) .stylist-img-slot > *,
-.stylist-grid .stylist-card:nth-child(3) .stylist-img-slot > *,
-.stylist-grid .stylist-card:nth-child(4) .stylist-img-slot > * { display: none; }
-.stylist-grid .stylist-card:nth-child(1) .stylist-img-slot::before,
-.stylist-grid .stylist-card:nth-child(2) .stylist-img-slot::before,
-.stylist-grid .stylist-card:nth-child(3) .stylist-img-slot::before,
-.stylist-grid .stylist-card:nth-child(4) .stylist-img-slot::before { display: none; }
 </style>
 </head>
 <body>
 
-<!-- ─── SOCIAL PROOF TOAST ───
-     Behavior: Triggers 4s after load, auto-hides at 9s
-     Psychology: Recent action by someone nearby = I should too -->
+<!-- ─── APPOINTMENT NOTICE ─── -->
 <div id="toast">
   <span class="toast-dot"></span>
-  <span class="toast-text"><strong>มีคน 3 คน</strong> จอง appointment ในสัปดาห์นี้ · ใกล้ The Base วงศ์สว่าง</span>
+  <span class="toast-text"><strong>นัดหมายล่วงหน้า</strong> เพื่อให้ทีมงานจัดเวลาและช่างที่เหมาะกับคุณ</span>
   <button class="toast-close" onclick="this.parentElement.classList.remove('show')">✕</button>
 </div>
 
@@ -1442,7 +1429,7 @@ section { padding: 100px 5vw; }
     <li><a href="about.html">ABOUT</a></li>
     <li style="display:flex;align-items:center;gap:8px;">
       <span class="nav-slot-pill" id="nav-slot-count" aria-live="polite"></span>
-      <a href="#booking" class="nav-cta">จองเลย →</a>
+      <a href="#booking" class="nav-cta">จองคิว →</a>
     </li>
   </ul>
 </nav>
@@ -1451,80 +1438,51 @@ section { padding: 100px 5vw; }
 <section id="hero">
   <div class="hero-left">
     <p class="hero-eyebrow">THE REFINED ALCHEMIST · ตลาดใบบัว วงศ์สว่าง</p>
-    <h1 class="hero-wordmark">ALCHEMY <em>JOON</em></h1>
+    <h1 class="hero-wordmark" aria-label="ALCHEMY JOON">
+      <span>ALCHEMY</span>
+      <img src="images/Joon_Gold.svg" alt="" aria-hidden="true" class="hero-joon-logo">
+    </h1>
     <p class="hero-sub">HAIR · NAIL · LASH</p>
     <div class="gold-line"></div>
-    <p class="hero-tagline">เปลี่ยนผม เปลี่ยนตัวตน</p>
-    <p class="hero-tagline-en">Transform. Not just style.</p>
+    <p class="hero-tagline">ปรับลุคให้เป็นคุณ—ชัดขึ้น</p>
+    <p class="hero-tagline-en">Refine your look. Feel more like you.</p>
     <div class="hero-buttons">
-      <a href="#booking" class="btn-primary">จอง Appointment →</a>
-      <a href="#gallery" class="btn-secondary">ดูผลงาน</a>
+      <a href="#booking" class="btn-primary">จองคิว →</a>
+      <a href="#gallery" class="btn-secondary">ดูผลงานจริง</a>
     </div>
-    <!-- Loss aversion: live slot count -->
-    <p class="hero-slots-nudge" id="hero-slot-nudge">เหลือ 4 slot ว่างสำหรับสัปดาห์นี้</p>
+    <p class="hero-slots-nudge" id="hero-slot-nudge">นัดหมายล่วงหน้าเพื่อช่วยลดเวลารอ</p>
   </div>
 
-  <!-- HERO IMAGE ZONE -->
   <div class="hero-right">
-    <!--
-    ════════════════════════════════════════
-    📸 IMAGE PLACEMENT GUIDE — HERO
-    ════════════════════════════════════════
-    วางรูปที่นี่ด้วย CSS:
-      .hero-img-slot { background-image: url('hero.jpg'); background-size: cover; background-position: center top; }
-    แล้วลบ .img-placeholder ออก
-
-    SPEC: Portrait ตั้ง (1:2 ratio)
-    ▸ ตัวเลือกดีที่สุด: After-look hair color/style
-      ที่ถ่ายจากหลังเก้าอี้ในร้าน มองเห็นกระจก
-    ▸ แสง: warm, moody — ไม่ใช่ clinical white
-    ▸ Emotion: คนในรูปดูมีความมั่นใจ satisfied
-    ▸ พื้นหลัง: dark interior หรือ bokeh สีเขียวเข้ม
-    ▸ ห้ามใช้ stock photo ช่าง
-    Psychology: Identity priming — คนเห็นแล้ว
-    จินตนาการตัวเองในรูปแทนที่นางแบบ
-    ════════════════════════════════════════
-    -->
     <div class="hero-img-slot">
-      <div class="img-placeholder">
-        <span class="img-tag">HERO IMAGE ZONE</span>
-        <p class="img-instruction">รูปผลลัพธ์งาน<br>portrait ตั้ง (1:2)</p>
-        <p class="img-spec">
-          ✦ After-look: สี / ดัด / cut<br>
-          ✦ แสง warm moody<br>
-          ✦ ถ่ายในร้าน มองเห็น interior<br>
-          ✦ ไม่ใช้ stock photo<br>
-          ✦ ขนาดแนะนำ 800×1600px
-        </p>
-      </div>
   </div>
 </section>
 
-<!-- ─── SOCIAL PROOF TICKER ─── -->
-<div class="proof-ticker" role="marquee" aria-label="Recent bookings">
+<!-- ─── SALON HIGHLIGHTS ─── -->
+<div class="proof-ticker" role="marquee" aria-label="Salon highlights">
   <div class="ticker-track" id="ticker">
-    <span class="ticker-item"><span class="ticker-dot"></span> <strong>Noon</strong> จาก The Base เพิ่งจอง Balayage เมื่อ 2 ชั่วโมงก่อน</span>
-    <span class="ticker-item"><span class="ticker-dot"></span> <strong>Fah</strong> จาก Ideo Mobi จองดัดดิจิทัล · ว่างสัปดาห์หน้า</span>
-    <span class="ticker-item"><span class="ticker-dot"></span> <strong>Prae</strong> จาก Aspire รีวิว 5 ดาว หลังทำ Olaplex treatment</span>
-    <span class="ticker-item"><span class="ticker-dot"></span> <strong>Mint</strong> จาก The Line วงศ์สว่าง จองต่อขนตา Volume</span>
-    <span class="ticker-item"><span class="ticker-dot"></span> <strong>28 คน</strong> จองในเดือนนี้ · ว่างอีกเพียง 12 slot</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> <strong>Hair · Nail · Lash</strong> ครบในที่เดียว</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> <strong>แจ้งราคาก่อนเริ่ม</strong> ไม่เพิ่มรายการโดยไม่ได้รับการยืนยัน</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> <strong>บริการเคมีเส้นผม</strong> ประเมินสภาพผมก่อนทุกครั้ง</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> <strong>นัดหมายเป็นเวลา</strong> เพื่อช่วยลดเวลารอ</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> <strong>ใกล้ MRT วงศ์สว่าง</strong> ตลาดใบบัว Zone D ชั้น 1</span>
     <!-- duplicate for seamless loop -->
-    <span class="ticker-item"><span class="ticker-dot"></span> <strong>Noon</strong> จาก The Base เพิ่งจอง Balayage เมื่อ 2 ชั่วโมงก่อน</span>
-    <span class="ticker-item"><span class="ticker-dot"></span> <strong>Fah</strong> จาก Ideo Mobi จองดัดดิจิทัล · ว่างสัปดาห์หน้า</span>
-    <span class="ticker-item"><span class="ticker-dot"></span> <strong>Prae</strong> จาก Aspire รีวิว 5 ดาว หลังทำ Olaplex treatment</span>
-    <span class="ticker-item"><span class="ticker-dot"></span> <strong>Mint</strong> จาก The Line วงศ์สว่าง จองต่อขนตา Volume</span>
-    <span class="ticker-item"><span class="ticker-dot"></span> <strong>28 คน</strong> จองในเดือนนี้ · ว่างอีกเพียง 12 slot</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> <strong>Hair · Nail · Lash</strong> ครบในที่เดียว</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> <strong>แจ้งราคาก่อนเริ่ม</strong> ไม่เพิ่มรายการโดยไม่ได้รับการยืนยัน</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> <strong>บริการเคมีเส้นผม</strong> ประเมินสภาพผมก่อนทุกครั้ง</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> <strong>นัดหมายเป็นเวลา</strong> เพื่อช่วยลดเวลารอ</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> <strong>ใกล้ MRT วงศ์สว่าง</strong> ตลาดใบบัว Zone D ชั้น 1</span>
   </div>
 </div>
 
 <!-- ─── INTRO STATS ─── -->
 <div id="intro">
   <div class="intro-stat reveal">
-    <span class="intro-stat-num">300ม.</span>
+    <span class="intro-stat-num">300 เมตร</span>
     <span class="intro-stat-label">จาก MRT วงศ์สว่าง</span>
   </div>
   <div class="intro-stat reveal" style="transition-delay:.1s">
-    <span class="intro-stat-num">10–22น.</span>
+    <span class="intro-stat-num">10:00–22:00</span>
     <span class="intro-stat-label">เปิดทุกวัน</span>
   </div>
   <div class="intro-stat reveal" style="transition-delay:.2s">
@@ -1532,8 +1490,8 @@ section { padding: 100px 5vw; }
     <span class="intro-stat-label">Hair · Nail · Lash</span>
   </div>
   <div class="intro-stat reveal" style="transition-delay:.3s">
-    <span class="intro-stat-num">First</span>
-    <span class="intro-stat-label">Themed salon ในย่าน</span>
+    <span class="intro-stat-num">Alchemy</span>
+    <span class="intro-stat-label">ซาลอนคอนเซปต์ Apothecary</span>
   </div>
 </div>
 
@@ -1544,85 +1502,18 @@ section { padding: 100px 5vw; }
       <p class="section-eyebrow">TRANSFORMATION GALLERY</p>
       <h2 class="section-title">ผลงานจริง จากมือช่างจริง</h2>
     </div>
-    <p class="section-desc">ทุกภาพคือลูกค้าจริง ไม่มี stock photo ไม่มี filter เกิน — เพราะผลลัพธ์ดีพอที่จะพูดแทนตัวเอง</p>
+    <p class="section-desc">ทุกภาพคือผลงานจากลูกค้าจริงของเรา โดยไม่ปรับแต่งภาพจนเกินจริง เพื่อให้คุณเห็นผลลัพธ์ได้ใกล้เคียงที่สุด</p>
   </div>
 
-  <!--
-  ════════════════════════════════════════════════════
-  📸 GALLERY IMAGE PLACEMENT GUIDE
-  Psychology: Mosaic irregular layout → Von Restorff
-  effect — ตาหยุดมองนานกว่า grid ธรรมดา 40%
-  ════════════════════════════════════════════════════
-  แต่ละ slot = CSS grid area ที่กำหนดไว้แล้ว
-  วาง real photo ด้วย:
-    .img-slot.sX { background-image: url('photo.jpg');
-    background-size: cover; background-position: center; }
-  แล้ว visibility:hidden ส่วน .img-slot-inner
-  ════════════════════════════════════════════════════ -->
   <div class="gallery-mosaic reveal" style="transition-delay:.2s">
 
-    <!-- S1: Large portrait — flagship result -->
-    <div class="img-slot s1">
-      <div class="img-slot-inner">
-        <span class="slot-category">HAIR COLOR</span>
-        <p class="slot-spec">ผลงานสีผม<br>portrait ตั้ง (2:3)<br>warm tone, dark bg</p>
-      </div>
-      <span class="slot-label">Balayage · Highlight</span>
-    </div>
-
-    <!-- S2: Landscape — nail art -->
-    <div class="img-slot s2">
-      <div class="img-slot-inner">
-        <span class="slot-category">NAIL ART</span>
-        <p class="slot-spec">เล็บอาร์ต landscape<br>close-up มือ (4:3)</p>
-      </div>
-      <span class="slot-label">Nail Art</span>
-    </div>
-
-    <!-- S3: Large portrait — lash/face -->
-    <div class="img-slot s3">
-      <div class="img-slot-inner">
-        <span class="slot-category">LASH · BROW</span>
-        <p class="slot-spec">ต่อขนตา / คิ้ว<br>portrait ตั้ง (2:3)<br>close-up หน้า natural light</p>
-      </div>
-      <span class="slot-label">Volume Lash</span>
-    </div>
-
-    <!-- S4: Square — hair treatment -->
-    <div class="img-slot s4">
-      <div class="img-slot-inner">
-        <span class="slot-category">TREATMENT</span>
-        <p class="slot-spec">Olaplex / K18<br>before→after (1:1)</p>
-      </div>
-      <span class="slot-label">Bond Treatment</span>
-    </div>
-
-    <!-- S5: Wide — salon interior -->
-    <div class="img-slot s5">
-      <div class="img-slot-inner">
-        <span class="slot-category">INTERIOR</span>
-        <p class="slot-spec">บรรยากาศร้าน wide-angle<br>apothecary props visible<br>ไม่มีคนในรูป (3:1 landscape)</p>
-      </div>
-      <span class="slot-label">Alchemy Joon · Wongsawang</span>
-    </div>
-
-    <!-- S6: Square — product -->
-    <div class="img-slot s6">
-      <div class="img-slot-inner">
-        <span class="slot-category">PRODUCTS</span>
-        <p class="slot-spec">Olaplex / K18 bottle<br>on dark surface (1:1)<br>moody flat lay</p>
-      </div>
-      <span class="slot-label">Olaplex No.3</span>
-    </div>
-
-    <!-- S7: Square — styled result -->
-    <div class="img-slot s7">
-      <div class="img-slot-inner">
-        <span class="slot-category">CUT · STYLE</span>
-        <p class="slot-spec">ตัดผม / style after<br>portrait or 3/4 shot (1:1)</p>
-      </div>
-      <span class="slot-label">Digital Perm</span>
-    </div>
+    <div class="img-slot s1"><span class="slot-label">Balayage · Highlight</span></div>
+    <div class="img-slot s2"><span class="slot-label">Nail Art</span></div>
+    <div class="img-slot s3"><span class="slot-label">Volume Lash</span></div>
+    <div class="img-slot s4"><span class="slot-label">Bond Treatment</span></div>
+    <div class="img-slot s5"><span class="slot-label">Alchemy Joon · Wong Sawang</span></div>
+    <div class="img-slot s6"><span class="slot-label">Olaplex No.3</span></div>
+    <div class="img-slot s7"><span class="slot-label">Digital Perm</span></div>
 
   </div>
 
@@ -1639,61 +1530,45 @@ section { padding: 100px 5vw; }
       <p class="section-eyebrow">OUR SERVICES</p>
       <h2 class="section-title">ศิลปะแห่งการเปลี่ยนแปลง</h2>
     </div>
-    <p class="section-desc">ทุกบริการออกแบบมาเพื่อให้คุณรู้สึกถึงความแตกต่าง ด้วยผลิตภัณฑ์ระดับ Olaplex และ K18 ที่ช่วยปกป้องเส้นผมทุกขั้นตอน</p>
+    <p class="section-desc">ครบทั้งผม เล็บ และขนตา พร้อมคำแนะนำที่เหมาะกับสไตล์และความต้องการของคุณ สำหรับบริการเคมีเส้นผม เราเลือกใช้ Olaplex หรือ K18 ตามความเหมาะสม</p>
   </div>
 
   <div class="services-grid">
     <div class="service-card reveal">
-      <!-- 📸 SERVICE IMAGE: Hair
-           Spec: Before/After or styled result
-           Ratio: 4:3 landscape, warm lit, in-salon -->
-      <div class="service-img-slot">
-        <span class="svc-slot-tag">HAIR IMAGE (4:3)</span>
-        <p class="svc-slot-spec">ผลลัพธ์งานผม<br>สี / ดัด / ตัด<br>ถ่ายในร้านจริง</p>
-      </div>
+      <div class="service-img-slot"></div>
       <div class="service-body">
         <p class="service-name">Hair</p>
         <p class="service-name-th">ทำผม · ตัด · สี · ดัด · ยืด</p>
-        <p class="service-desc">ตัด สี บาลายาจ ดัดดิจิทัล รีบอนด์ treatment ด้วยมาตรฐาน damage-safe — Olaplex และ K18 ทุก chemical service</p>
+        <p class="service-desc">ตัดผม ทำสี บาลายาจ ดัดดิจิทัล ยืด และทรีตเมนต์ พร้อมประเมินสภาพผมและเลือกใช้ Olaplex หรือ K18 ตามความเหมาะสม</p>
         <div class="service-price-row">
           <span class="price-label">เริ่มต้นที่</span>
-          <span class="price-value">299 บาท</span>
+          <span class="price-value">290 บาท</span>
         </div>
       </div>
     </div>
 
     <div class="service-card reveal" style="transition-delay:.1s">
-      <!-- 📸 SERVICE IMAGE: Nail
-           Spec: Close-up nail art (4:3 landscape) -->
-      <div class="service-img-slot">
-        <span class="svc-slot-tag">NAIL IMAGE (4:3)</span>
-        <p class="svc-slot-spec">เล็บอาร์ต close-up<br>มือถือ / วางบน surface<br>แสงสว่าง ชัด</p>
-      </div>
+      <div class="service-img-slot"></div>
       <div class="service-body">
         <p class="service-name">Nail</p>
         <p class="service-name-th">เล็บ · เจล · อาร์ต · ถอด</p>
-        <p class="service-desc">เจลสีเดียว เล็บอาร์ต Ombre French Tip ทำโดยช่างที่มีประสบการณ์ วัสดุมาตรฐาน รับประกัน 7 วัน</p>
+        <p class="service-desc">เจลสีเดียว เล็บอาร์ต ออมเบร และ French Tip ดูแลโดยช่างที่มีประสบการณ์ พร้อมแนะนำการดูแลหลังทำ</p>
         <div class="service-price-row">
           <span class="price-label">เริ่มต้นที่</span>
-          <span class="price-value">350 บาท</span>
+          <span class="price-value">550 บาท</span>
         </div>
       </div>
     </div>
 
     <div class="service-card reveal" style="transition-delay:.2s">
-      <!-- 📸 SERVICE IMAGE: Lash
-           Spec: Close-up eye/lash result (4:3) -->
-      <div class="service-img-slot">
-        <span class="svc-slot-tag">LASH IMAGE (4:3)</span>
-        <p class="svc-slot-spec">ต่อขนตา close-up<br>ตาเดี่ยวหรือคู่<br>natural / studio light</p>
-      </div>
+      <div class="service-img-slot"></div>
       <div class="service-body">
         <p class="service-name">Lash</p>
         <p class="service-name-th">ต่อขนตา · Classic · Volume</p>
-        <p class="service-desc">Classic Volume Mega Volume Hybrid ใช้กาวมาตรฐาน อย. ช่างผ่านการฝึกอบรม ทุก set รับประกัน</p>
+        <p class="service-desc">Classic · Hybrid · Volume · Mega Volume เลือกแบบที่เหมาะกับรูปตาและลุคที่ต้องการ โดยช่างที่ผ่านการฝึกอบรม</p>
         <div class="service-price-row">
           <span class="price-label">เริ่มต้นที่</span>
-          <span class="price-value">399 บาท</span>
+          <span class="price-value">650 บาท</span>
         </div>
       </div>
     </div>
@@ -1706,13 +1581,13 @@ section { padding: 100px 5vw; }
   <div class="pricing-header">
     <div class="reveal">
       <p class="section-eyebrow" style="color:var(--gold)">TRANSPARENT PRICING</p>
-      <h2 class="section-title" style="color:var(--cream)">ราคาชัดเจน ไม่มีบวกเพิ่ม</h2>
-      <p class="section-desc" style="color:#B8C8B8">เราเปิดราคาทุกบริการตั้งแต่ต้น ไม่มี "ราคาสอบถาม" ไม่มี upsell กลางทาง</p>
+      <h2 class="section-title" style="color:var(--cream)">ราคาชัดเจนก่อนเริ่ม</h2>
+      <p class="section-desc" style="color:#B8C8B8">เราประเมินและแจ้งราคาก่อนให้บริการทุกครั้ง โดยไม่เพิ่มรายการโดยไม่ได้รับการยืนยันจากคุณ</p>
     </div>
     <div class="anchor-chip reveal" style="transition-delay:.15s">
-      <strong>เปรียบเทียบกับร้านแบรนด์ดังในห้างย่านนี้</strong>
-      ดัดดิจิทัล 5,000–6,000 บาท+ · สีผม 3,000 บาท+<br>
-      Alchemy Joon · คุณภาพเดียวกัน เริ่มที่ <span style="color:var(--gold);font-family:'Marcellus',serif">3,500 บาท</span>
+      <strong>ประเมินตามบริการและสภาพจริง</strong>
+      บริการทำสี ดัด หรือยืดอาจแตกต่างกันตามความยาว ความหนา และสภาพผม<br>
+      ทีมงานจะยืนยันราคากับคุณก่อนเริ่มทุกครั้ง
     </div>
   </div>
 
@@ -1749,7 +1624,7 @@ section { padding: 100px 5vw; }
       <div class="price-item"><span class="price-item-name">ออกแบบ / แว็กซ์คิ้ว</span><span class="price-item-val">฿ 390</span></div>
     </div>
   </div>
-  <p class="pricing-note reveal" style="transition-delay:.3s; margin-top:20px; text-align:center; font-size:11px; color:var(--muted); letter-spacing:.06em;">ราคาที่แสดงเป็นราคา Grand Opening · Signature Color & Personal Potion — ผสมสดต่อหน้าเฉพาะคุณ</p>
+  <p class="pricing-note reveal" style="transition-delay:.3s; margin-top:20px; text-align:center; font-size:11px; color:var(--muted); letter-spacing:.06em;">Signature Color และ Personal Potion ผสมสูตรเฉพาะสำหรับคุณ · โปรดสอบถามรายละเอียดและเงื่อนไขก่อนจอง</p>
 </section>
 
 <!-- ─── STYLIST PROFILES ─── -->
@@ -1759,30 +1634,12 @@ section { padding: 100px 5vw; }
       <p class="section-eyebrow">MEET YOUR ALCHEMISTS</p>
       <h2 class="section-title">รู้จักช่างของคุณก่อนมาถึง</h2>
     </div>
-    <p class="section-desc">เลือกช่างที่ตรงกับสไตล์คุณ — เพราะ chemistry ที่ดีระหว่างช่างกับลูกค้า คือครึ่งหนึ่งของผลลัพธ์</p>
+    <p class="section-desc">เลือกช่างที่ตรงกับสไตล์และบริการที่คุณต้องการ เพราะการสื่อสารที่ดีช่วยให้ทั้งประสบการณ์และผลลัพธ์ใกล้เคียงกับที่คุณคาดหวัง</p>
   </div>
 
   <div class="stylist-grid">
     <div class="stylist-card reveal" style="transition-delay:.05s">
-      <!--
-      📸 STYLIST IMAGE: Portrait
-      Psychology: Parasocial familiarity
-      เห็นหน้าก่อนมา = trust +40% ก่อนนั่งเก้าอี้
-
-      Spec: ✦ Close-up portrait 3:4 ratio
-            ✦ Natural smile, not forced
-            ✦ Dark background (matches brand)
-            ✦ Looking slightly off-camera
-            ✦ Wearing apron / branded outfit
-            ✦ ขนาด 600×800px ขึ้นไป
-      วาง: .stylist-img-slot { background-image: url('stylist1.jpg'); background-size:cover; }
-      ลบ .stylist-img-slot::before (dashed border)
-      -->
-      <div class="stylist-img-slot">
-        <span class="stylist-slot-icon">◈</span>
-        <span class="stylist-slot-label">STYLIST PHOTO (3:4)</span>
-        <p class="stylist-slot-spec">Portrait ตั้ง · close-up<br>dark bg · natural smile<br>looking off-camera<br>ขนาด 600×800px+</p>
-      </div>
+      <div class="stylist-img-slot"></div>
       <div class="stylist-info">
         <p class="stylist-name">วิชญา</p>
         <p class="stylist-role">LEAD STYLIST · HAIR COLOR</p>
@@ -1791,16 +1648,12 @@ section { padding: 100px 5vw; }
           <span class="stylist-tag">K-Style Cut</span>
           <span class="stylist-tag">Olaplex</span>
         </div>
-        <a href="#booking" class="stylist-book-btn">จองกับช่างคนนี้ →</a>
+        <a href="#booking" class="stylist-book-btn">เลือกช่างคนนี้ตอนจอง →</a>
       </div>
     </div>
 
     <div class="stylist-card reveal" style="transition-delay:.1s">
-      <div class="stylist-img-slot">
-        <span class="stylist-slot-icon">◈</span>
-        <span class="stylist-slot-label">STYLIST PHOTO (3:4)</span>
-        <p class="stylist-slot-spec">Portrait ตั้ง · close-up<br>dark bg · natural smile<br>looking off-camera</p>
-      </div>
+      <div class="stylist-img-slot"></div>
       <div class="stylist-info">
         <p class="stylist-name">ปาณิสรา</p>
         <p class="stylist-role">SENIOR STYLIST · COLOR SPECIALIST</p>
@@ -1809,16 +1662,12 @@ section { padding: 100px 5vw; }
           <span class="stylist-tag">Digital Perm</span>
           <span class="stylist-tag">Rebond</span>
         </div>
-        <a href="#booking" class="stylist-book-btn">จองกับช่างคนนี้ →</a>
+        <a href="#booking" class="stylist-book-btn">เลือกช่างคนนี้ตอนจอง →</a>
       </div>
     </div>
 
     <div class="stylist-card reveal" style="transition-delay:.15s">
-      <div class="stylist-img-slot">
-        <span class="stylist-slot-icon">◇</span>
-        <span class="stylist-slot-label">NAIL ARTIST PHOTO (3:4)</span>
-        <p class="stylist-slot-spec">Portrait พร้อมเล็บโชว์<br>หรือ working shot<br>ถ่ายในร้านจริง</p>
-      </div>
+      <div class="stylist-img-slot"></div>
       <div class="stylist-info">
         <p class="stylist-name">นิชชา</p>
         <p class="stylist-role">NAIL ARTIST</p>
@@ -1827,16 +1676,12 @@ section { padding: 100px 5vw; }
           <span class="stylist-tag">Ombre</span>
           <span class="stylist-tag">French</span>
         </div>
-        <a href="#booking" class="stylist-book-btn">จองกับช่างคนนี้ →</a>
+        <a href="#booking" class="stylist-book-btn">เลือกช่างคนนี้ตอนจอง →</a>
       </div>
     </div>
 
     <div class="stylist-card reveal" style="transition-delay:.2s">
-      <div class="stylist-img-slot">
-        <span class="stylist-slot-icon">◈</span>
-        <span class="stylist-slot-label">LASH ARTIST PHOTO (3:4)</span>
-        <p class="stylist-slot-spec">Portrait หรือ working shot<br>ถ่ายในร้าน<br>dark bg, moody</p>
-      </div>
+      <div class="stylist-img-slot"></div>
       <div class="stylist-info">
         <p class="stylist-name">ธัญพิชชา</p>
         <p class="stylist-role">LASH ARTIST</p>
@@ -1845,7 +1690,7 @@ section { padding: 100px 5vw; }
           <span class="stylist-tag">Mega Volume</span>
           <span class="stylist-tag">Hybrid</span>
         </div>
-        <a href="#booking" class="stylist-book-btn">จองกับช่างคนนี้ →</a>
+        <a href="#booking" class="stylist-book-btn">เลือกช่างคนนี้ตอนจอง →</a>
       </div>
     </div>
   </div>
@@ -1856,7 +1701,7 @@ section { padding: 100px 5vw; }
   <div style="padding: 0 5vw; margin-bottom:56px;">
     <div class="section-header reveal">
       <div>
-        <p class="section-eyebrow" style="color:var(--gold)">WHAT ALCHEMISTS SAY</p>
+        <p class="section-eyebrow" style="color:var(--gold)">WHAT OUR CLIENTS SAY</p>
         <h2 class="section-title" style="color:var(--cream)">เสียงจากลูกค้าจริง</h2>
       </div>
       <p class="section-desc" style="color:var(--muted)">รีวิวจากผู้อยู่อาศัยในคอนโดย่านวงศ์สว่าง — คนใกล้บ้านคุณ</p>
@@ -1971,22 +1816,22 @@ section { padding: 100px 5vw; }
       <li class="why-item reveal" style="transition-delay:.1s">
         <span class="why-num">02</span>
         <div>
-          <p class="why-text-head">ผมสวยสุขภาพดี <em>ไม่กลัวพัง</em></p>
-          <p class="why-text-body">หมดกังวลเรื่องผมช็อตแม้ฟอกหลายรอบ เพราะทุกบริการเคมีของเรามาพร้อมมาตรฐานการปกป้องเส้นผมระดับโลกด้วย Olaplex & K18 <strong>ปกป้องผมระหว่างทำ ไม่ใช่แค่หลังทำ</strong></p>
+          <p class="why-text-head">ดูแลผมสวย <em>ควบคู่สุขภาพผม</em></p>
+          <p class="why-text-body">ก่อนทำบริการเคมี ช่างจะประเมินสภาพผมและวางแผนการทำที่เหมาะสม พร้อมเลือกใช้ Olaplex หรือ K18 ตามความจำเป็น <strong>ดูแลเส้นผมตั้งแต่ระหว่างการทำ</strong></p>
         </div>
       </li>
       <li class="why-item reveal" style="transition-delay:.2s">
         <span class="why-num">03</span>
         <div>
-          <p class="why-text-head">บริการแบบ Private Booking <em>ไม่ต้องเสียเวลารอ</em></p>
-          <p class="why-text-body">เพราะเวลาของคุณมีค่า ระบบจองคิวของเราจึงล็อกเวลาให้คุณโดยเฉพาะ เดินเข้าร้านแล้ว <strong>รับบริการได้ทันทีโดยไม่ต้องนั่งรอ</strong></p>
+          <p class="why-text-head">นัดหมายเป็นเวลา <em>วางแผนได้ง่ายขึ้น</em></p>
+          <p class="why-text-body">เพราะเวลาของคุณมีค่า เราจึงจัดเวลาและช่างตามนัดหมายที่ยืนยันไว้ล่วงหน้า <strong>ช่วยลดเวลารอและทำให้ทุกขั้นตอนราบรื่นขึ้น</strong></p>
         </div>
       </li>
       <li class="why-item reveal" style="transition-delay:.3s">
         <span class="why-num">04</span>
         <div>
           <p class="why-text-head">Aesthetic Space <em>สวยสะกดทุกมุม</em></p>
-          <p class="why-text-body">อดื่มด่ำกับซาลอนคอนเซปต์ Alchemy Apothecary แห่งแรกในย่านนี้ ที่เราตั้งใจออกแบบแสงและสเปซ <strong>ให้คุณถ่ายรูปเช็คอินได้สวยทุกองศา</strong></p>
+          <p class="why-text-body">ดื่มด่ำกับซาลอนคอนเซปต์ Alchemy Apothecary ที่เราตั้งใจออกแบบทั้งแสง สี และบรรยากาศ <strong>ให้คุณผ่อนคลายและถ่ายรูปได้สวยในทุกมุม</strong></p>
         </div>
       </li>
     </ul>
@@ -1998,13 +1843,12 @@ section { padding: 100px 5vw; }
 <!-- ─── BOOKING CTA ─── -->
 <section id="booking">
   <p class="booking-mark reveal">✦ THE ALCHEMIST IS READY ✦</p>
-  <h2 class="booking-title reveal" style="transition-delay:.1s">พร้อมเปลี่ยนแล้วหรือยัง</h2>
-  <p class="booking-title-th reveal" style="transition-delay:.2s">จองได้ทันที ไม่ต้องรอ</p>
+  <h2 class="booking-title reveal" style="transition-delay:.1s">พร้อมให้ตัวตนของคุณชัดขึ้นหรือยัง</h2>
+  <p class="booking-title-th reveal" style="transition-delay:.2s">เลือกช่องทางที่สะดวก แล้วให้ทีมงานยืนยันคิว</p>
 
-  <!-- Loss aversion: scarcity -->
   <div class="booking-scarcity reveal" style="transition-delay:.25s">
     <span class="scarcity-dot"></span>
-    <span id="slot-countdown">เหลือ 4 slot ว่างสำหรับสัปดาห์นี้ · จองก่อนหมด</span>
+    <span id="slot-countdown">นัดหมายล่วงหน้าเพื่อให้ทีมงานจัดเวลาและช่างที่เหมาะกับคุณ</span>
   </div>
 
   <!-- Micro-commitment: show process, not full ask -->
@@ -2015,28 +1859,25 @@ section { padding: 100px 5vw; }
     </div>
     <div class="booking-step">
       <div class="step-num">2</div>
-      <span class="step-label">เลือกวัน-เวลา</span>
+      <span class="step-label">แจ้งวันและเวลาที่ต้องการ</span>
     </div>
     <div class="booking-step">
       <div class="step-num">3</div>
-      <span class="step-label">ยืนยัน — เสร็จ</span>
+      <span class="step-label">รอทีมงานยืนยันคิว</span>
     </div>
   </div>
 
   <div class="booking-channels reveal" style="transition-delay:.35s">
     <a href="https://lin.ee/9pr6YMM" class="channel-btn" target="_blank" rel="noopener">
-      <span class="channel-icon icon-line">L</span>จอง LINE OA
+      <span class="channel-icon icon-line">L</span>จองผ่าน LINE
     </a>
     <a href="https://www.gowabi.com" class="channel-btn">
-      <span class="channel-icon icon-gowabi">G</span>จอง GoWabi
-    </a>
-    <a href="tel:+66XX-XXX-XXXX" class="channel-btn">
-      <span class="channel-icon" style="background:rgba(200,160,74,0.15);color:var(--gold)">☏</span>โทรจอง
+      <span class="channel-icon icon-gowabi">G</span>จองผ่าน GoWabi
     </a>
   </div>
 
   <p class="booking-guarantee reveal" style="transition-delay:.4s">
-    จองล่วงหน้า · ยืนยัน Appointment ทันที · ไม่มีค่ามัดจำ ✦
+    ทีมงานยืนยันคิวผ่านช่องทางที่คุณเลือก · เงื่อนไขมัดจำขึ้นอยู่กับประเภทบริการ ✦
   </p>
 </section>
 
@@ -2088,10 +1929,9 @@ section { padding: 100px 5vw; }
     <div class="footer-col">
       <p class="footer-col-title">SOCIAL</p>
       <ul class="footer-links">
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">TikTok</a></li>
+        <li><a href="https://www.instagram.com/alchemyjoon/" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="https://lin.ee/9pr6YMM" target="_blank" rel="noopener">LINE OA</a></li>
-        <li><a href="#">GoWabi</a></li>
+        <li><a href="https://www.gowabi.com" target="_blank" rel="noopener">GoWabi</a></li>
       </ul>
     </div>
   </div>
@@ -2109,8 +1949,7 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 reveals.forEach(el => io.observe(el));
 
-/* ── Social proof toast: shows 4s after load, hides 9s ──
-   Psychology: Recency + Social Validation */
+/* ── Appointment notice: shows 4s after load, hides 9s ── */
 setTimeout(() => { document.getElementById('toast').classList.add('show'); }, 4000);
 setTimeout(() => { document.getElementById('toast').classList.remove('show'); }, 9000);
 
@@ -2123,27 +1962,6 @@ window.addEventListener('scroll', () => {
   else { ib.classList.remove('show'); }
 }, { passive: true });
 
-/* ── Scarcity slot counter ──
-   Psychology: Loss aversion — countdown creates urgency
-   Uses sessionStorage so number doesn't jump on refresh */
-(function() {
-  const key = 'aj_slots';
-  let slots = sessionStorage.getItem(key);
-  if (!slots) {
-    slots = Math.floor(Math.random() * 3) + 3; /* 3–5 */
-    sessionStorage.setItem(key, slots);
-  }
-  const txt = `เหลือ ${slots} slot ว่างสำหรับสัปดาห์นี้ · จองก่อนหมด`;
-  const el1 = document.getElementById('slot-countdown');
-  const el2 = document.getElementById('hero-slot-nudge');
-  const el3 = document.getElementById('nav-slot-count');
-  if (el1) el1.textContent = txt;
-  if (el2) el2.textContent = `เหลือ ${slots} slot ว่างสำหรับสัปดาห์นี้`;
-  if (el3) {
-    el3.textContent = `เหลือ ${slots} slot`;
-    el3.style.display = 'inline-block';
-  }
-})();
 </script>
 </body>
 </html>
