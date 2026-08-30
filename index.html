@@ -246,6 +246,53 @@ nav {
   padding: 8px 20px !important; border-radius: 40px !important;
   letter-spacing: 0.08em !important;
 }
+/* ── Hamburger ── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 101;
+}
+.nav-burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--cream);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .nav-burger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: rgba(20,20,20,0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,160,74,0.2);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 12px 0 20px;
+    list-style: none;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; text-align: center; }
+  .nav-links li:last-child { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 12px 0 4px; }
+  .nav-links a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 0.12em; }
+  .nav-cta { padding: 9px 28px !important; }
+  .nav-slot-pill { display: none !important; }
+}
+
 /* Slot scarcity pill — separate from gold CTA for contrast */
 .nav-slot-pill {
   display: none; /* shown by JS when count available */
@@ -1428,7 +1475,10 @@ section { padding: 100px 5vw; }
          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
     <span class="nav-logo-fallback" style="display:none">ALCHEMY <span>JOON</span></span>
   </a>
-  <ul class="nav-links">
+  <button class="nav-burger" id="nav-burger" aria-label="เมนู" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links" role="navigation">
     <li><a href="#gallery">GALLERY</a></li>
     <li><a href="#services">SERVICES</a></li>
     <li><a href="#pricing">PRICING</a></li>
@@ -1634,12 +1684,12 @@ section { padding: 100px 5vw; }
   <div class="pricing-grid reveal" style="transition-delay:.28s">
     <div class="price-col">
       <p class="price-col-head">NAIL — เล็บ</p>
-      <div class="price-item"><span class="price-item-name">ทาสีเจล มือ</span><span class="price-item-val">฿ 550</span></div>
-      <div class="price-item"><span class="price-item-name">ทาสีเจล เท้า</span><span class="price-item-val">฿ 650</span></div>
-      <div class="price-item"><span class="price-item-name">ต่อเล็บเจล / PVC (เต็มชุด)</span><span class="price-item-val">฿ 1,190</span></div>
-      <div class="price-item"><span class="price-item-name">ต่อเล็บอะคริลิค</span><span class="price-item-val">฿ 1,390</span></div>
-      <div class="price-item"><span class="price-item-name">สปามือ/เท้า + ตัดหนัง</span><span class="price-item-val">฿ 450</span></div>
-      <div class="price-item"><span class="price-item-name">ถอด / ล้างเล็บ</span><span class="price-item-val">฿ 150</span></div>
+      <div class="price-item"><span class="price-item-name">ทาสีเจล มือ</span><span class="price-item-val">เริ่ม ฿ 390</span></div>
+      <div class="price-item"><span class="price-item-name">ทาสีเจล เท้า</span><span class="price-item-val">฿ 490</span></div>
+      <div class="price-item"><span class="price-item-name">ต่อเล็บ PVC (ไม่รวมสี)</span><span class="price-item-val">฿ 650</span></div>
+      <div class="price-item"><span class="price-item-name">Poly Gel / เจลขึ้นฟอร์ม (ไม่รวมสี)</span><span class="price-item-val">฿ 1,100</span></div>
+      <div class="price-item"><span class="price-item-name">สปามือ / สปาเท้า</span><span class="price-item-val">฿ 290 / 390</span></div>
+      <div class="price-item"><span class="price-item-name">ถอด / ล้างเล็บ</span><span class="price-item-val">฿ 80</span></div>
     </div>
     <div class="price-col">
       <p class="price-col-head">LASH / BROW — ขนตา / คิ้ว</p>
@@ -1969,6 +2019,25 @@ section { padding: 100px 5vw; }
 </footer>
 
 <script>
+/* ── Mobile nav burger ── */
+(function () {
+  const burger = document.getElementById('nav-burger');
+  const links  = document.getElementById('nav-links');
+  if (!burger || !links) return;
+  burger.addEventListener('click', () => {
+    const open = burger.classList.toggle('open');
+    links.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      burger.classList.remove('open');
+      links.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
 /* ── Scroll reveal ── */
 const reveals = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
