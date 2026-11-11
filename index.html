@@ -1451,10 +1451,9 @@ section { padding: 100px 5vw; }
 .services-grid .service-card:nth-child(3) .service-img-slot { background-image: url('images/Service/service-lash.png'); background-size: cover; background-position: center; }
 
 /* Stylist portraits */
-.stylist-grid .stylist-card:nth-child(1) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist1.png'); background-size: cover; background-position: center top; }
-.stylist-grid .stylist-card:nth-child(2) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist2.png'); background-size: cover; background-position: center top; }
-.stylist-grid .stylist-card:nth-child(3) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/Stylist3.png'); background-size: cover; background-position: center top; }
-.stylist-grid .stylist-card:nth-child(4) .stylist-img-slot { background-image: url('images/Stylist%20Portraits/stylist4.png'); background-size: cover; background-position: center top; }
+.stylist-img-slot.ph-pla { background-image: url('images/Stylist%20Portraits/stylist1.png'); background-size: cover; background-position: center top; }
+.stylist-img-slot.ph-pat { background-image: url('images/Stylist%20Portraits/Stylist3.png'); background-size: cover; background-position: center top; }
+.stylist-img-slot.ph-nok { background-image: url('images/Stylist%20Portraits/stylist4.png'); background-size: cover; background-position: center top; }
 </style>
 </head>
 <body>
@@ -1724,7 +1723,7 @@ section { padding: 100px 5vw; }
 
   <div class="stylist-grid">
     <div class="stylist-card reveal" style="transition-delay:.05s">
-      <div class="stylist-img-slot"></div>
+      <div class="stylist-img-slot ph-pla"></div>
       <div class="stylist-info">
         <p class="stylist-name">PLA</p>
         <p class="stylist-role">SENIOR STYLIST · HAIR COLOR</p>
@@ -1738,21 +1737,7 @@ section { padding: 100px 5vw; }
     </div>
 
     <div class="stylist-card reveal" style="transition-delay:.1s">
-      <div class="stylist-img-slot"></div>
-      <div class="stylist-info">
-        <p class="stylist-name">BAIFERN</p>
-        <p class="stylist-role">JUNIOR STYLIST</p>
-        <div class="stylist-tags">
-          <span class="stylist-tag">Rebond</span>
-          <span class="stylist-tag">Digital Perm</span>
-          <span class="stylist-tag">Treatment</span>
-        </div>
-        <a href="#booking" class="stylist-book-btn">เลือกช่างคนนี้ตอนจอง →</a>
-      </div>
-    </div>
-
-    <div class="stylist-card reveal" style="transition-delay:.15s">
-      <div class="stylist-img-slot"></div>
+      <div class="stylist-img-slot ph-pat"></div>
       <div class="stylist-info">
         <p class="stylist-name">PAT</p>
         <p class="stylist-role">JUNIOR STYLIST</p>
@@ -1764,14 +1749,31 @@ section { padding: 100px 5vw; }
       </div>
     </div>
 
-    <div class="stylist-card reveal" style="transition-delay:.2s">
-      <div class="stylist-img-slot"></div>
+    <div class="stylist-card reveal" style="transition-delay:.15s">
+      <div class="stylist-img-slot ph-nok"></div>
       <div class="stylist-info">
         <p class="stylist-name">NOK</p>
         <p class="stylist-role">SENIOR STYLIST · HAIR COLOR</p>
         <div class="stylist-tags">
           <span class="stylist-tag">Treatment</span>
           <span class="stylist-tag">Hair Color</span>
+          <span class="stylist-tag">Balayage</span>
+          <span class="stylist-tag">Highlight</span>
+        </div>
+        <a href="#booking" class="stylist-book-btn">เลือกช่างคนนี้ตอนจอง →</a>
+      </div>
+    </div>
+
+    <div class="stylist-card reveal" style="transition-delay:.2s">
+      <div class="stylist-img-slot"><span class="stylist-slot-icon">E</span></div>
+      <div class="stylist-info">
+        <p class="stylist-name">EARTH</p>
+        <p class="stylist-role">NAIL &amp; LASH TECHNICIAN</p>
+        <div class="stylist-tags">
+          <span class="stylist-tag">Gel Nail</span>
+          <span class="stylist-tag">Ombre &amp; French</span>
+          <span class="stylist-tag">Lash Lift</span>
+          <span class="stylist-tag">Volume Lash</span>
         </div>
         <a href="#booking" class="stylist-book-btn">เลือกช่างคนนี้ตอนจอง →</a>
       </div>
