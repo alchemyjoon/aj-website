@@ -834,7 +834,8 @@ nav {
 }
 .price-item:last-child { border-bottom: none; }
 .price-item-name { color: rgba(246,242,232,0.65); }
-.price-item-val { color: var(--gold); font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 300; font-size: 13px; }
+.price-item-val { color: var(--gold); font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 300; font-size: 13px; white-space: nowrap; text-align: right; flex-shrink: 0; margin-left: 12px; }
+.price-item-val .from { display: block; font-size: 10px; opacity: 0.7; letter-spacing: 0.04em; }
 /* Anchor highlight: most popular item */
 .price-item.featured {
   background: rgba(200,160,74,0.06);
@@ -1599,10 +1600,10 @@ section { padding: 100px 5vw; }
       <div class="service-body">
         <p class="service-name">Hair</p>
         <p class="service-name-th">Essentials · Colour · Transform · Ritual</p>
-        <p class="service-desc">ตั้งแต่ Wash &amp; Dry · The Cut ไปจนถึง Signature Colour · Keratin Smoothing และ Alchemy Repair Ritual — ผสมสูตรเฉพาะสำหรับผมคุณทุกครั้ง</p>
+        <p class="service-desc">ตั้งแต่ Wash &amp; Dry · The Cut ไปจนถึง Balayage · Keratin และ Alchemy Repair Ritual ทรีตเมนต์ 4 ขั้นตอน Milbon</p>
         <div class="service-price-row">
           <span class="price-label">เริ่มต้นที่</span>
-          <span class="price-value">390 บาท</span>
+          <span class="price-value">290 บาท</span>
         </div>
       </div>
     </div>
@@ -1615,7 +1616,7 @@ section { padding: 100px 5vw; }
         <p class="service-desc">เจลสีเดียว เล็บอาร์ต ออมเบร และ French Tip ดูแลโดยช่างที่มีประสบการณ์ พร้อมแนะนำการดูแลหลังทำ</p>
         <div class="service-price-row">
           <span class="price-label">เริ่มต้นที่</span>
-          <span class="price-value">550 บาท</span>
+          <span class="price-value">390 บาท</span>
         </div>
       </div>
     </div>
@@ -1625,10 +1626,10 @@ section { padding: 100px 5vw; }
       <div class="service-body">
         <p class="service-name">Lash</p>
         <p class="service-name-th">ต่อขนตา · Classic · Volume</p>
-        <p class="service-desc">Classic · Hybrid · Volume · Mega Volume เลือกแบบที่เหมาะกับรูปตาและลุคที่ต้องการ โดยช่างที่ผ่านการฝึกอบรม</p>
+        <p class="service-desc">Classic · Hybrid · Wispy Velvet · Lash Lifting เลือกแบบที่เหมาะกับรูปตาและลุคที่ต้องการ โดยช่างที่ผ่านการฝึกอบรม</p>
         <div class="service-price-row">
           <span class="price-label">เริ่มต้นที่</span>
-          <span class="price-value">650 บาท</span>
+          <span class="price-value">999 บาท</span>
         </div>
       </div>
     </div>
@@ -1654,31 +1655,36 @@ section { padding: 100px 5vw; }
   <div class="pricing-grid reveal" style="transition-delay:.2s">
     <div class="price-col">
       <p class="price-col-head">ESSENTIALS — สระ · ตัด</p>
-      <div class="price-item featured"><span class="price-item-name">Wash &amp; Dry — สระ + ไดร์ <span class="price-popular">PROMO</span></span><span class="price-item-val">฿ 390 <small style="font-size:0.75em;opacity:0.7;">เฉพาะเดือนนี้</small></span></div>
-      <div class="price-item"><span class="price-item-name">The Cut — ตัด + สระไดร์</span><span class="price-item-val">฿ 790</span></div>
-      <div class="price-item"><span class="price-item-name">The Cut · Men</span><span class="price-item-val">฿ 790</span></div>
-      <div class="price-item"><span class="price-item-name">The Cut · Kids</span><span class="price-item-val">฿ 490</span></div>
+      <div class="price-item"><span class="price-item-name">Wash &amp; Dry — สระ + ไดร์</span><span class="price-item-val"><small class="from">เริ่มต้น</small>฿ 290</span></div>
+      <div class="price-item"><span class="price-item-name">Vitamin Wash — สระผมวิตามิน</span><span class="price-item-val">฿ 800</span></div>
+      <div class="price-item"><span class="price-item-name">The Cut — ตัดหญิง + สระไดร์</span><span class="price-item-val">฿ 790</span></div>
+      <div class="price-item"><span class="price-item-name">Cut + Detox — ตัด + ดีท็อกซ์ผม</span><span class="price-item-val">฿ 1,000</span></div>
+      <div class="price-item"><span class="price-item-name">The Cut · Men — ตัดชาย</span><span class="price-item-val">฿ 590</span></div>
+      <div class="price-item"><span class="price-item-name">The Cut · Kids — ตัดเด็ก</span><span class="price-item-val">฿ 490</span></div>
+      <p style="margin-top:10px;font-size:11px;color:var(--muted);font-style:italic;line-height:1.6;">เสริมได้ — ม้วนผม ฿100 · หนีบผม ฿100 · ผมต่อ ฿250–300</p>
     </div>
     <div class="price-col">
       <p class="price-col-head">COLOUR — สี</p>
-      <div class="price-item"><span class="price-item-name">Root Alchemy — เติมสีเฉพาะโคน</span><span class="price-item-val">฿ 2,000</span></div>
-      <div class="price-item"><span class="price-item-name">Full Colour — เปลี่ยนสีทั้งศีรษะ</span><span class="price-item-val">เริ่มต้น ฿ 2,500</span></div>
-      <div class="price-item featured"><span class="price-item-name">Signature Colour — เฉดผสมเฉพาะคุณ <span class="price-popular">SIGNATURE</span></span><span class="price-item-val">เริ่มต้น ฿ 2,500</span></div>
-
-      <div class="price-item"><span class="price-item-name">Highlights — ไฮไลท์</span><span class="price-item-val">เริ่มต้น ฿ 1,500</span></div>
-      <div class="price-item"><span class="price-item-name">Lightening — ฟอก / บลีช</span><span class="price-item-val">฿ 2,000 / ครั้ง</span></div>
-      <div class="price-item"><span class="price-item-name">Balayage — บาลายาจ</span><span class="price-item-val">เริ่มต้น ฿ 8,000</span></div>
+      <div class="price-item"><span class="price-item-name">Root Colour — ย้อมสีโคน</span><span class="price-item-val">฿ 2,000</span></div>
+      <div class="price-item"><span class="price-item-name">Full Colour — ย้อมทั้งศีรษะ</span><span class="price-item-val"><small class="from">เริ่มต้น</small>฿ 2,500</span></div>
+      <div class="price-item"><span class="price-item-name">Highlights — ไฮไลท์</span><span class="price-item-val">฿ 1,500</span></div>
+      <div class="price-item"><span class="price-item-name">Lightening — บลีช / ฟอก</span><span class="price-item-val"><small class="from">เริ่มต้น</small>฿ 1,500</span></div>
+      <div class="price-item featured"><span class="price-item-name">Balayage — บาลายาจ <span class="price-popular">SIGNATURE</span></span><span class="price-item-val"><small class="from">เริ่มต้น</small>฿ 8,000</span></div>
     </div>
     <div class="price-col">
-      <p class="price-col-head">TRANSFORM — ยืด · ดัด · คีราติน</p>
-      <div class="price-item"><span class="price-item-name">Straight Ritual — ยืด/รีบอนด์</span><span class="price-item-val">เริ่มต้น ฿ 3,500</span></div>
-      <div class="price-item featured"><span class="price-item-name">Keratin Smoothing <span class="price-popular">POPULAR</span></span><span class="price-item-val">เริ่มต้น ฿ 3,500</span></div>
-      <div class="price-item"><span class="price-item-name">Digital Wave — ดัดดิจิทัล</span><span class="price-item-val">เริ่มต้น ฿ 4,500</span></div>
+      <p class="price-col-head">TRANSFORM — ยืด · ดัด · เคราติน</p>
+      <div class="price-item"><span class="price-item-name">Straight Ritual — ยืด / รีบอนด์</span><span class="price-item-val"><small class="from">เริ่มต้น</small>฿ 3,500</span></div>
+      <div class="price-item"><span class="price-item-name">Digital Wave — ดัดดิจิทัล</span><span class="price-item-val"><small class="from">เริ่มต้น</small>฿ 3,500</span></div>
+      <div class="price-item featured"><span class="price-item-name">Keratin Complex — เคราติน คอมเพล็กซ์ <span class="price-popular">POPULAR</span></span><span class="price-item-val"><small class="from">เริ่มต้น</small>฿ 4,500</span></div>
+      <div class="price-item"><span class="price-item-name">DD Keratin — ดีดี เคราติน</span><span class="price-item-val"><small class="from">เริ่มต้น</small>฿ 3,500</span></div>
     </div>
     <div class="price-col">
       <p class="price-col-head">RITUAL — ทรีตเมนต์</p>
-      <div class="price-item"><span class="price-item-name">Bond Potion — ซ่อมพันธะผมระหว่างทำสี</span><span class="price-item-val">เริ่มต้น ฿ 500</span></div>
-      <div class="price-item featured"><span class="price-item-name">Alchemy Repair Ritual — 4 ขั้นตอน ฟื้นผมจากด้านใน <span class="price-popular">POPULAR</span></span><span class="price-item-val">เริ่มต้น ฿ 2,500</span></div>
+      <div class="price-item featured"><span class="price-item-name">Alchemy Repair Ritual — ทรีตเมนต์ 4 ขั้นตอน Milbon <span class="price-popular">POPULAR</span></span><span class="price-item-val"><small class="from">เริ่มต้น</small>฿ 2,500</span></div>
+      <div class="price-item"><span class="price-item-name">Bond Repair — เชื่อมแกนผม Epres</span><span class="price-item-val"><small class="from">เริ่มต้น</small>฿ 2,000</span></div>
+      <div class="price-item"><span class="price-item-name">Scalp Spa — สปาหนังศีรษะ</span><span class="price-item-val">฿ 2,000</span></div>
+      <div class="price-item"><span class="price-item-name">House Treatment — ทรีตเมนต์สูตรทางร้าน</span><span class="price-item-val">฿ 1,000</span></div>
+      <p style="margin-top:10px;font-size:11px;color:var(--muted);font-style:italic;line-height:1.6;">ทำคู่บริการเคมี — ทรีตเมนต์ 4 ขั้นตอน เริ่มต้น ฿2,000 · เชื่อมแกน Epres เริ่มต้น ฿1,500</p>
     </div>
   </div>
 
@@ -1687,28 +1693,35 @@ section { padding: 100px 5vw; }
   <div class="pricing-grid reveal" style="transition-delay:.28s">
     <div class="price-col">
       <p class="price-col-head">NAIL — เล็บ</p>
-      <div class="price-item"><span class="price-item-name">Hand Ritual — ขัด · มาสก์ · นวด</span><span class="price-item-val">฿ 290</span></div>
-      <div class="price-item"><span class="price-item-name">Gel Colour — สีพื้น มือ</span><span class="price-item-val">฿ 390</span></div>
-      <div class="price-item"><span class="price-item-name">Foot Ritual — ขัด · แช่ · นวด</span><span class="price-item-val">฿ 390</span></div>
-      <div class="price-item"><span class="price-item-name">Gel Colour · Pedicure — สีพื้น เท้า</span><span class="price-item-val">฿ 490</span></div>
-      <div class="price-item"><span class="price-item-name">Overlay — เสริมหน้าเล็บด้วยเจล ไม่ต่อความยาว</span><span class="price-item-val">฿ 550</span></div>
-      <div class="price-item"><span class="price-item-name">Ombre & French — ไล่สี · baby boomer</span><span class="price-item-val">฿ 590</span></div>
-      <div class="price-item"><span class="price-item-name">Cat Eye — สีแมกเนติก มิติเปลี่ยนตามแสง</span><span class="price-item-val">฿ 890</span></div>
-      <div class="price-item"><span class="price-item-name">Gel Extension — ต่อเล็บ PVC รวมทาสีแล้ว</span><span class="price-item-val">฿ 1,040</span></div>
-      <div class="price-item"><span class="price-item-name">Poly Gel Sculpt — ขึ้นฟอร์มเอง รวมทาสีแล้ว</span><span class="price-item-val">฿ 1,490</span></div>
-      <p style="margin-top:10px;font-size:11px;color:var(--muted);font-style:italic;line-height:1.6;">เสริมได้กับทุกบริการ — Nail Art ฿50 / นิ้ว · Russian Manicure +฿150</p>
+      <div class="price-item"><span class="price-item-name">Gel Colour — สีเจลพื้น มือ</span><span class="price-item-val">฿ 390</span></div>
+      <div class="price-item"><span class="price-item-name">Gel Colour · Pedicure — สีเจลพื้น เท้า</span><span class="price-item-val">฿ 490</span></div>
+      <div class="price-item"><span class="price-item-name">Gel Colour — มือ + เท้า</span><span class="price-item-val">฿ 800</span></div>
+      <div class="price-item"><span class="price-item-name">Overlay — เสริมหน้าเล็บ</span><span class="price-item-val">฿ 500</span></div>
+      <div class="price-item featured"><span class="price-item-name">Special Colour — Cat Eye · Chrome · Glitter · French · Ombre <span class="price-popular">POPULAR</span></span><span class="price-item-val">฿ 550</span></div>
+      <div class="price-item"><span class="price-item-name">Aurora</span><span class="price-item-val">฿ 700</span></div>
+      <div class="price-item"><span class="price-item-name">Tip Extension — ต่อเล็บ PVC / Tip</span><span class="price-item-val">฿ 500</span></div>
+      <div class="price-item"><span class="price-item-name">Soft Gel Tip / Gel X</span><span class="price-item-val">฿ 800</span></div>
+      <div class="price-item"><span class="price-item-name">Gel Extension / Builder Gel</span><span class="price-item-val">฿ 1,200</span></div>
+      <div class="price-item"><span class="price-item-name">Poly Gel</span><span class="price-item-val">฿ 1,300</span></div>
+      <div class="price-item"><span class="price-item-name">Hand Spa · Foot Spa</span><span class="price-item-val">฿ 500 · ฿ 600</span></div>
+      <div class="price-item"><span class="price-item-name">Spa + Manicure + ทาสี</span><span class="price-item-val">฿ 890</span></div>
+      <div class="price-item"><span class="price-item-name">Spa + Pedicure + ทาสี</span><span class="price-item-val">฿ 950</span></div>
+      <p style="margin-top:10px;font-size:11px;color:var(--muted);font-style:italic;line-height:1.6;">งานต่อเล็บยังไม่รวมทาสี · ลายง่าย ฿50 / นิ้ว · ลายละเอียด ฿100 / นิ้ว</p>
     </div>
     <div class="price-col">
-      <p class="price-col-head">LASH — ขนตา</p>
-      <div class="price-item"><span class="price-item-name">Lash Refill — ภายใน 2–3 สัปดาห์</span><span class="price-item-val">฿ 390</span></div>
-      <div class="price-item"><span class="price-item-name">Classic</span><span class="price-item-val">฿ 699</span></div>
-      <div class="price-item"><span class="price-item-name">Lash Lift + Tint — ดัดและย้อมขนตาจริง</span><span class="price-item-val">฿ 790</span></div>
-      <div class="price-item"><span class="price-item-name">Hybrid</span><span class="price-item-val">฿ 950</span></div>
-      <div class="price-item featured"><span class="price-item-name">Volume <span class="price-popular">POPULAR</span></span><span class="price-item-val">฿ 1,290</span></div>
-      <div class="price-item"><span class="price-item-name">Mega Volume</span><span class="price-item-val">฿ 1,490</span></div>
+      <p class="price-col-head">LASH &amp; BROW — ขนตา · คิ้ว</p>
+      <div class="price-item"><span class="price-item-name">Classic — เส้นต่อเส้น</span><span class="price-item-val">฿ 999</span></div>
+      <div class="price-item"><span class="price-item-name">Dewy Wet Look — จับช่อเกาหลี</span><span class="price-item-val">฿ 999</span></div>
+      <div class="price-item featured"><span class="price-item-name">Hybrid Styles — Moonlit · Sweet Spell · Winged Charm · Flare · Cutie Bloom <span class="price-popular">POPULAR</span></span><span class="price-item-val">฿ 1,290</span></div>
+      <div class="price-item"><span class="price-item-name">Wispy Velvet — ขนตาวอลลุ่ม</span><span class="price-item-val">฿ 1,490</span></div>
+      <div class="price-item"><span class="price-item-name">Lash Lifting — ดัดขนตา</span><span class="price-item-val">฿ 1,290</span></div>
+      <div class="price-item"><span class="price-item-name">Lash Lifting + Tint — ดัดขนตา + ทิ้น</span><span class="price-item-val">฿ 1,590</span></div>
+      <div class="price-item"><span class="price-item-name">Brow Lifting — ดัดคิ้ว</span><span class="price-item-val">฿ 499</span></div>
+      <div class="price-item"><span class="price-item-name">Lash Removal — ถอดขนตา</span><span class="price-item-val">฿ 250</span></div>
+      <p style="margin-top:10px;font-size:11px;color:var(--muted);font-style:italic;line-height:1.6;">เติมขนตา 50% ของราคาต่อ</p>
     </div>
   </div>
-  <p class="pricing-note reveal" style="transition-delay:.32s; margin-top:20px; text-align:center; font-size:11px; color:var(--muted); letter-spacing:.06em;">Signature Colour และ Alchemy Repair Ritual ผสมสูตรเฉพาะสำหรับคุณ · โปรดสอบถามรายละเอียดและเงื่อนไขก่อนจอง</p>
+  <p class="pricing-note reveal" style="transition-delay:.32s; margin-top:20px; text-align:center; font-size:11px; color:var(--muted); letter-spacing:.06em;">ราคาผมขึ้นกับความยาว (S · M · L · XL) และสภาพผม · ทีมงานจะยืนยันราคากับคุณก่อนเริ่มทุกครั้ง</p>
 </section>
 
 <!-- ─── STYLIST PROFILES ─── -->
